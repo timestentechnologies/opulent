@@ -39,6 +39,14 @@ include 'order_modal.php';
 <link rel="shortcut icon" href="favicon.ico?v=2">
 <link rel="apple-touch-icon" href="images/favicon.png?v=2">
 <meta name="theme-color" content="#0B5FB0">
+
+<!-- Immediate FOUC prevention - hide content before anything loads -->
+<style>
+/* Hide everything immediately to prevent FOUC */
+html { visibility: hidden; }
+body { visibility: hidden; }
+</style>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -58,6 +66,14 @@ body{font-family:'Inter',sans-serif;background:#fff;min-height:100vh}
 <!-- Tailwind CSS with proper loading -->
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css"></noscript>
+
+<script>
+// Show content immediately when script runs
+(function() {
+    document.documentElement.style.visibility = 'visible';
+    document.body.style.visibility = 'visible';
+})();
+</script>
 
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>
@@ -88,24 +104,23 @@ tailwind.config={
 // Define login status for use in order.js
 var user_logged_in = <?php echo isset($_SESSION['customer_id']) ? 'true' : 'false'; ?>;
 
-// Prevent FOUC by hiding content until styles are loaded
+// Prevent FOUC by showing content when styles are loaded
 (function() {
-    var html = document.documentElement;
-    html.style.visibility = 'hidden';
-    
-    function showContent() {
-        html.style.visibility = 'visible';
+    // Content is already visible from the script above, but ensure it stays visible
+    function ensureVisible() {
+        document.documentElement.style.visibility = 'visible';
+        document.body.style.visibility = 'visible';
     }
     
-    // Show content when CSS is loaded or after a timeout
+    // Double-check visibility on DOM ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', showContent);
+        document.addEventListener('DOMContentLoaded', ensureVisible);
     } else {
-        showContent();
+        ensureVisible();
     }
     
     // Fallback timeout
-    setTimeout(showContent, 1000);
+    setTimeout(ensureVisible, 500);
 })();
 </script>
 <script src="js/order.js"></script>
