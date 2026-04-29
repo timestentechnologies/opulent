@@ -68,6 +68,19 @@ $useroles=$_SESSION['name'];
                 <?php }?>
 
     <?php if(in_array($_SESSION["username"], ['user', 'admin'])) { ?>
+                     <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-credit-card"></i><span class="hide-menu">Financial Management</span></a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li><a href="payments.php">Payments</a></li>
+                            <li><a href="expenses.php">Expenses</a></li>
+                            <li><a href="invoices.php">Invoices</a></li>
+                            <li><a href="customer_statements.php">Customer Statements</a></li>
+                            <li><a href="owner_statements.php">Owner Statements</a></li>
+                        </ul>
+                    </li>
+                <?php }?>
+
+
+                <?php if(in_array($_SESSION["username"], ['user', 'admin'])) { ?>
                      <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hide-menu">Order Management</span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="add_order.php">Add order</a></li>
