@@ -1,0 +1,252 @@
+[23-Apr-2025 08:38:48 UTC] Database connection error: Access denied for user 'root'@'localhost' (using password: NO)
+[23-Apr-2025 08:45:36 UTC] Database connection error: Access denied for user 'root'@'localhost' (using password: NO)
+[23-Apr-2025 08:56:12 UTC] Database connection error: Access denied for user 'root'@'localhost' (using password: NO)
+[23-Apr-2025 09:06:10 UTC] Database connection error: Access denied for user 'root'@'localhost' (using password: NO)
+[23-Apr-2025 09:06:57 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/header.php on line 1
+[23-Apr-2025 09:06:57 UTC] PHP Warning:  Undefined global variable $_SESSION in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 3
+[23-Apr-2025 09:06:57 UTC] PHP Warning:  Trying to access array offset on value of type null in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 3
+[23-Apr-2025 09:06:57 UTC] PHP Warning:  Trying to access array offset on value of type null in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 7
+[23-Apr-2025 09:06:57 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 48
+[23-Apr-2025 09:06:57 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 59
+[23-Apr-2025 09:06:57 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 68
+[23-Apr-2025 09:06:57 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 79
+[23-Apr-2025 09:06:57 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 94
+[23-Apr-2025 09:06:57 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 104
+[23-Apr-2025 09:06:57 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 115
+[23-Apr-2025 09:06:57 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 149
+[23-Apr-2025 09:07:03 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/header.php on line 1
+[23-Apr-2025 09:07:03 UTC] PHP Warning:  Undefined global variable $_SESSION in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 3
+[23-Apr-2025 09:07:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 3
+[23-Apr-2025 09:07:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 7
+[23-Apr-2025 09:07:03 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 48
+[23-Apr-2025 09:07:03 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 59
+[23-Apr-2025 09:07:03 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 68
+[23-Apr-2025 09:07:03 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 79
+[23-Apr-2025 09:07:03 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 94
+[23-Apr-2025 09:07:03 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 104
+[23-Apr-2025 09:07:03 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 115
+[23-Apr-2025 09:07:03 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 149
+[23-Apr-2025 09:08:45 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/header.php on line 1
+[23-Apr-2025 09:08:45 UTC] PHP Warning:  Undefined global variable $_SESSION in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 3
+[23-Apr-2025 09:08:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 3
+[23-Apr-2025 09:08:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 7
+[23-Apr-2025 09:08:45 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 48
+[23-Apr-2025 09:08:45 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 59
+[23-Apr-2025 09:08:45 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 68
+[23-Apr-2025 09:08:45 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 79
+[23-Apr-2025 09:08:45 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 94
+[23-Apr-2025 09:08:45 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 104
+[23-Apr-2025 09:08:45 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 115
+[23-Apr-2025 09:08:45 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 149
+[23-Apr-2025 09:09:27 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/header.php on line 1
+[23-Apr-2025 09:09:27 UTC] PHP Warning:  Undefined global variable $_SESSION in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 3
+[23-Apr-2025 09:09:27 UTC] PHP Warning:  Trying to access array offset on value of type null in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 3
+[23-Apr-2025 09:09:27 UTC] PHP Warning:  Trying to access array offset on value of type null in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 7
+[23-Apr-2025 09:09:27 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 48
+[23-Apr-2025 09:09:27 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 59
+[23-Apr-2025 09:09:27 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 68
+[23-Apr-2025 09:09:27 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 79
+[23-Apr-2025 09:09:27 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 94
+[23-Apr-2025 09:09:27 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 104
+[23-Apr-2025 09:09:27 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 115
+[23-Apr-2025 09:09:27 UTC] PHP Warning:  Undefined array key "username" in /home1/opulentl/admin.opulentlaundry.co.ke/sidebar.php on line 149
+[23-Apr-2025 09:23:21 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 40
+[23-Apr-2025 09:23:21 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated when there is no active session in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 52
+[23-Apr-2025 09:23:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/head.php:1) in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 55
+[23-Apr-2025 09:30:47 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 40
+[23-Apr-2025 09:30:47 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated when there is no active session in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 52
+[23-Apr-2025 09:30:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/head.php:1) in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 55
+[23-Apr-2025 09:30:52 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 40
+[23-Apr-2025 09:30:52 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated when there is no active session in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 52
+[23-Apr-2025 09:30:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/head.php:1) in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 55
+[23-Apr-2025 09:30:52 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 40
+[23-Apr-2025 09:30:52 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated when there is no active session in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 52
+[23-Apr-2025 09:30:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/head.php:1) in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 55
+[23-Apr-2025 09:30:53 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 40
+[23-Apr-2025 09:30:53 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated when there is no active session in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 52
+[23-Apr-2025 09:30:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/head.php:1) in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 55
+[23-Apr-2025 09:30:53 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 40
+[23-Apr-2025 09:30:53 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated when there is no active session in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 52
+[23-Apr-2025 09:30:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/head.php:1) in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 55
+[23-Apr-2025 09:30:59 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 40
+[23-Apr-2025 09:30:59 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated when there is no active session in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 52
+[23-Apr-2025 09:30:59 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/head.php:1) in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 55
+[23-Apr-2025 09:34:47 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 40
+[23-Apr-2025 09:34:47 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated when there is no active session in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 52
+[23-Apr-2025 09:34:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/head.php:1) in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 55
+[23-Apr-2025 09:34:51 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 40
+[23-Apr-2025 09:34:51 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated when there is no active session in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 52
+[23-Apr-2025 09:34:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/head.php:1) in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 55
+[23-Apr-2025 09:34:52 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 40
+[23-Apr-2025 09:34:52 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated when there is no active session in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 52
+[23-Apr-2025 09:34:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/head.php:1) in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 55
+[23-Apr-2025 09:34:55 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 40
+[23-Apr-2025 09:34:55 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated when there is no active session in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 52
+[23-Apr-2025 09:34:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/head.php:1) in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 55
+[23-Apr-2025 09:35:01 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 40
+[23-Apr-2025 09:35:01 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated when there is no active session in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 52
+[23-Apr-2025 09:35:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/head.php:1) in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 55
+[23-Apr-2025 10:11:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/session_config.php:28) in /home1/opulentl/admin.opulentlaundry.co.ke/login.php on line 39
+[23-Apr-2025 10:20:10 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:10 UTC] Login attempt for email: timestenkenya@gmail.com
+[23-Apr-2025 10:20:10 UTC] Successful login for user: admin
+[23-Apr-2025 10:20:10 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:10 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:13 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:13 UTC] Login attempt for email: timestenkenya@gmail.com
+[23-Apr-2025 10:20:13 UTC] Successful login for user: admin
+[23-Apr-2025 10:20:13 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:13 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:15 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:15 UTC] Login attempt for email: timestenkenya@gmail.com
+[23-Apr-2025 10:20:15 UTC] Successful login for user: admin
+[23-Apr-2025 10:20:15 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:15 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:16 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:16 UTC] Login attempt for email: timestenkenya@gmail.com
+[23-Apr-2025 10:20:16 UTC] Successful login for user: admin
+[23-Apr-2025 10:20:17 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:17 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:18 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:18 UTC] Login attempt for email: timestenkenya@gmail.com
+[23-Apr-2025 10:20:18 UTC] Successful login for user: admin
+[23-Apr-2025 10:20:18 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:18 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:20 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:20 UTC] Login attempt for email: timestenkenya@gmail.com
+[23-Apr-2025 10:20:20 UTC] Successful login for user: admin
+[23-Apr-2025 10:20:20 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:20:20 UTC] Session started - ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+[23-Apr-2025 10:24:19 UTC] Session started with ID: 1f33492972f04c712929576341fe69a8
+[23-Apr-2025 10:24:19 UTC] New session generated with ID: 8a80491deb79575ecbac90e7735d9170
+[23-Apr-2025 10:24:19 UTC] Current session state - ID: 8a80491deb79575ecbac90e7735d9170, Data: Array
+(
+    [last_regeneration] => 1745403859
+)
+
+[23-Apr-2025 10:24:19 UTC] Session status at start: 2
+[23-Apr-2025 10:24:19 UTC] Session ID at start: 8a80491deb79575ecbac90e7735d9170
+[23-Apr-2025 10:24:20 UTC] Session started with ID: 8a80491deb79575ecbac90e7735d9170
+[23-Apr-2025 10:24:20 UTC] Current session state - ID: 8a80491deb79575ecbac90e7735d9170, Data: Array
+(
+    [last_regeneration] => 1745403859
+)
+
+[23-Apr-2025 10:24:20 UTC] Session status at start: 2
+[23-Apr-2025 10:24:20 UTC] Session ID at start: 8a80491deb79575ecbac90e7735d9170
+[23-Apr-2025 10:24:20 UTC] Login attempt for email: timestenkenya@gmail.com
+[23-Apr-2025 10:24:20 UTC] Generated password hash: 0adb8aec3bcdbaac5e5ea39c8dcd1dfe7337c9f93c3d615881fb3cec4e989362
+[23-Apr-2025 10:24:20 UTC] Query result count: 1
+[23-Apr-2025 10:24:20 UTC] Password match successful
+[23-Apr-2025 10:24:20 UTC] Session data set. Session ID: 8a80491deb79575ecbac90e7735d9170
+[23-Apr-2025 10:24:20 UTC] Session variables: Array
+(
+    [last_regeneration] => 1745403859
+    [id] => 1
+    [username] => admin
+    [password] => 0adb8aec3bcdbaac5e5ea39c8dcd1dfe7337c9f93c3d615881fb3cec4e989362
+    [email] => timestenkenya@gmail.com
+    [fname] => Timesten 
+    [lname] => Kenya
+    [image] => unr_harrypotter_171212_1815_34k5k.png
+    [is_logged_in] => 1
+)
+
+[23-Apr-2025 10:24:20 UTC] Session started with ID: 8a80491deb79575ecbac90e7735d9170
+[23-Apr-2025 10:24:20 UTC] Current session state - ID: 8a80491deb79575ecbac90e7735d9170, Data: Array
+(
+    [last_regeneration] => 1745403859
+    [id] => 1
+    [username] => admin
+    [password] => 0adb8aec3bcdbaac5e5ea39c8dcd1dfe7337c9f93c3d615881fb3cec4e989362
+    [email] => timestenkenya@gmail.com
+    [fname] => Timesten 
+    [lname] => Kenya
+    [image] => unr_harrypotter_171212_1815_34k5k.png
+    [is_logged_in] => 1
+)
+
+[23-Apr-2025 10:24:20 UTC] Header - Session ID: 8a80491deb79575ecbac90e7735d9170
+[23-Apr-2025 10:24:20 UTC] Header - Session Data: Array
+(
+    [last_regeneration] => 1745403859
+    [id] => 1
+    [username] => admin
+    [password] => 0adb8aec3bcdbaac5e5ea39c8dcd1dfe7337c9f93c3d615881fb3cec4e989362
+    [email] => timestenkenya@gmail.com
+    [fname] => Timesten 
+    [lname] => Kenya
+    [image] => unr_harrypotter_171212_1815_34k5k.png
+    [is_logged_in] => 1
+)
+
+[23-Apr-2025 10:24:20 UTC] Header - Session validation successful for user: timestenkenya@gmail.com
+[23-Apr-2025 10:24:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/connect.php:53) in /home1/opulentl/admin.opulentlaundry.co.ke/payment_config.php on line 7
+[23-Apr-2025 10:24:42 UTC] PHP Warning:  session_name(): Session name cannot be changed after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/session_config.php on line 7
+[23-Apr-2025 10:24:42 UTC] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/session_config.php on line 16
+[23-Apr-2025 10:24:42 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/session_config.php on line 26
+[23-Apr-2025 10:24:42 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/session_config.php on line 27
+[23-Apr-2025 10:24:42 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/session_config.php on line 28
+[23-Apr-2025 10:24:42 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/opulentl/admin.opulentlaundry.co.ke/session_config.php on line 35
+[23-Apr-2025 10:24:42 UTC] Session started with ID: 
+[23-Apr-2025 10:24:42 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated when there is no active session in /home1/opulentl/admin.opulentlaundry.co.ke/session_config.php on line 41
+[23-Apr-2025 10:24:42 UTC] New session generated with ID: 
+[23-Apr-2025 10:24:42 UTC] Current session state - ID: , Data: Array
+(
+    [last_regeneration] => 1745403882
+)
+
+[23-Apr-2025 10:24:42 UTC] Header - Session ID: 
+[23-Apr-2025 10:24:42 UTC] Header - Session Data: Array
+(
+    [last_regeneration] => 1745403882
+)
+
+[23-Apr-2025 10:24:42 UTC] Header - Session check failed: is_logged_in=false, email=not set
+[23-Apr-2025 10:24:42 UTC] PHP Notice:  ob_clean(): Failed to delete buffer. No buffer to delete in /home1/opulentl/admin.opulentlaundry.co.ke/header.php on line 18
+[23-Apr-2025 10:24:42 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/opulentl/admin.opulentlaundry.co.ke/view_user.php:1) in /home1/opulentl/admin.opulentlaundry.co.ke/header.php on line 19
+[06-May-2025 00:02:51 UTC] Session started with ID: e227c9661ab3959f7f806308ee555660
+[06-May-2025 00:02:51 UTC] New session generated with ID: 6e5c11a836da78e30f0583aa5e8c04db
+[06-May-2025 00:02:51 UTC] Current session state - ID: 6e5c11a836da78e30f0583aa5e8c04db, Data: Array
+(
+    [last_regeneration] => 1746489771
+)
+
+[06-May-2025 00:02:51 UTC] Session started with ID: 6e5c11a836da78e30f0583aa5e8c04db
+[06-May-2025 00:02:51 UTC] Current session state - ID: 6e5c11a836da78e30f0583aa5e8c04db, Data: Array
+(
+    [last_regeneration] => 1746489771
+)
+
+[06-May-2025 00:02:51 UTC] Session status at start: 2
+[06-May-2025 00:02:51 UTC] Session ID at start: 6e5c11a836da78e30f0583aa5e8c04db
+[06-May-2025 21:05:32 UTC] Session started with ID: fda1233328f13fbb6fc4d6baddb1c299
+[06-May-2025 21:05:32 UTC] New session generated with ID: 4836677eee5623e34f176d926753952b
+[06-May-2025 21:05:32 UTC] Current session state - ID: 4836677eee5623e34f176d926753952b, Data: Array
+(
+    [last_regeneration] => 1746565532
+)
+
+[06-May-2025 21:05:32 UTC] Session started with ID: 4836677eee5623e34f176d926753952b
+[06-May-2025 21:05:32 UTC] Current session state - ID: 4836677eee5623e34f176d926753952b, Data: Array
+(
+    [last_regeneration] => 1746565532
+)
+
+[06-May-2025 21:05:32 UTC] Session status at start: 2
+[06-May-2025 21:05:32 UTC] Session ID at start: 4836677eee5623e34f176d926753952b
+[06-May-2025 23:37:39 UTC] Session started with ID: 335aeb881db06d4a258a3822bec5ec4f
+[06-May-2025 23:37:39 UTC] New session generated with ID: b7a8df8f150c25f2976c9e116460481a
+[06-May-2025 23:37:39 UTC] Current session state - ID: b7a8df8f150c25f2976c9e116460481a, Data: Array
+(
+    [last_regeneration] => 1746574659
+)
+
+[06-May-2025 23:37:39 UTC] Session started with ID: b7a8df8f150c25f2976c9e116460481a
+[06-May-2025 23:37:39 UTC] Current session state - ID: b7a8df8f150c25f2976c9e116460481a, Data: Array
+(
+    [last_regeneration] => 1746574659
+)
+
+[06-May-2025 23:37:39 UTC] Session status at start: 2
+[06-May-2025 23:37:39 UTC] Session ID at start: b7a8df8f150c25f2976c9e116460481a

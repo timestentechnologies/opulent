@@ -1,0 +1,73 @@
+[03-Mar-2026 13:31:07 UTC] Session started with ID: d7ad73f42ca844ce49ca868109eb3f20
+[03-Mar-2026 13:31:07 UTC] New session generated with ID: 46a742ffad39be38163e259d0f5a704f
+[03-Mar-2026 13:31:07 UTC] Current session state - ID: 46a742ffad39be38163e259d0f5a704f, Data: Array
+(
+    [last_regeneration] => 1772544667
+)
+
+[03-Mar-2026 13:31:24 UTC] Session started with ID: 31a5a561f13239fe773c67cdaf7ad98d
+[03-Mar-2026 13:31:24 UTC] Current session state - ID: 31a5a561f13239fe773c67cdaf7ad98d, Data: Array
+(
+    [last_regeneration] => 1772544671
+    [id] => 1
+    [username] => admin
+    [password] => b4ba176d8ad99eb9133e51e872c0d5ffc7d27c86fe039a275ae34b3e482147b0
+    [email] => mokayageofrey5@gmail.com
+    [fname] => Geofrey
+    [lname] => Mokaya
+    [image] => unr_harrypotter_171212_1815_34k5k.png
+    [is_logged_in] => 1
+    [name] => Array
+        (
+            [0] => manage_user
+            [1] => add_user
+            [2] => edit_user
+            [3] => delete_user
+            [4] => add_order
+            [5] => edit_order
+            [6] => delete_order
+            [7] => edit_custome
+            [8] => delete_customer
+            [9] => add_services
+            [10] => delete_services
+        )
+
+)
+
+[03-Mar-2026 13:31:24 UTC] Header - Session ID: 31a5a561f13239fe773c67cdaf7ad98d
+[03-Mar-2026 13:31:24 UTC] Header - Session Data: Array
+(
+    [last_regeneration] => 1772544671
+    [id] => 1
+    [username] => admin
+    [password] => b4ba176d8ad99eb9133e51e872c0d5ffc7d27c86fe039a275ae34b3e482147b0
+    [email] => mokayageofrey5@gmail.com
+    [fname] => Geofrey
+    [lname] => Mokaya
+    [image] => unr_harrypotter_171212_1815_34k5k.png
+    [is_logged_in] => 1
+    [name] => Array
+        (
+            [0] => manage_user
+            [1] => add_user
+            [2] => edit_user
+            [3] => delete_user
+            [4] => add_order
+            [5] => edit_order
+            [6] => delete_order
+            [7] => edit_custome
+            [8] => delete_customer
+            [9] => add_services
+            [10] => delete_services
+        )
+
+)
+
+[03-Mar-2026 13:31:24 UTC] Header - Session validation successful for user: mokayageofrey5@gmail.com
+[13-Mar-2026 11:10:08 UTC] Session started with ID: 687a3f1bdabfa249ea632b2d810097b5
+[13-Mar-2026 11:10:08 UTC] New session generated with ID: fcb3a8dfb16f3ca6bb00418a937c43fe
+[13-Mar-2026 11:10:08 UTC] Current session state - ID: fcb3a8dfb16f3ca6bb00418a937c43fe, Data: Array
+(
+    [last_regeneration] => 1773400208
+)
+

@@ -1,0 +1,108 @@
+[01-May-2025 09:24:37 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home1/opulentl/admin.opulentlaundry.co.ke/pages/save_service.php on line 2
+[01-May-2025 09:24:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home1/opulentl/admin.opulentlaundry.co.ke/pages/save_service.php:2
+Stack trace:
+#0 {main}
+  thrown in /home1/opulentl/admin.opulentlaundry.co.ke/pages/save_service.php on line 2
+[04-May-2025 08:29:08 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_service.php on line 2
+[04-May-2025 08:29:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_service.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_service.php on line 2
+[07-May-2025 06:29:22 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_service.php on line 2
+[07-May-2025 06:29:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_service.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_service.php on line 2
+[11-May-2025 12:12:34 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:12:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:25:13 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:25:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:25:19 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:25:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:25:57 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:25:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:26:01 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:26:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:26:50 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:26:50 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:27:28 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:27:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:28:09 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:28:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:28:10 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:28:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:28:12 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:28:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:31:42 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:31:42 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:31:46 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:31:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:33:26 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:33:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:33:27 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:33:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:33:29 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:33:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:36:22 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:36:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:36:59 UTC] PHP Warning:  require_once(session_handler.php): Failed to open stream: No such file or directory in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:36:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'session_handler.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php:2
+Stack trace:
+#0 {main}
+  thrown in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_user.php on line 2
+[11-May-2025 12:59:26 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/opulentl/admin.opulentlaundry.co.ke/pages/session_handler.php on line 8
+[11-May-2025 13:06:43 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/opulentl/admin.opulentlaundry.co.ke/pages/session_handler.php on line 8
+[11-May-2025 13:07:54 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/opulentl/admin.opulentlaundry.co.ke/pages/session_handler.php on line 8
+[11-May-2025 13:52:29 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/opulentl/admin.opulentlaundry.co.ke/pages/session_handler.php on line 8
+[11-May-2025 14:26:41 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/opulentl/admin.opulentlaundry.co.ke/pages/session_handler.php on line 8
+[11-May-2025 14:26:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/opulentl/admin.opulentlaundry.co.ke/pages/session_handler.php:14) in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_order.php on line 14
+[11-May-2025 14:26:50 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/opulentl/admin.opulentlaundry.co.ke/pages/session_handler.php on line 8
+[11-May-2025 14:26:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/opulentl/admin.opulentlaundry.co.ke/pages/session_handler.php:14) in /home3/opulentl/admin.opulentlaundry.co.ke/pages/save_order.php on line 14

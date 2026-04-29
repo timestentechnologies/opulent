@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Test</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        img { max-width: 100px; height: auto; border: 1px solid #ccc; }
+        .success { color: #28a745; background: #d4edda; padding: 10px; border-radius: 5px; }
+        .info { color: #17a2b8; background: #d1ecf1; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Favicon Test Page</h1>
+    
+    <div class="success">
+        <strong>✅ Check your browser tab now!</strong> You should see the favicon icon in the tab.
+    </div>
+    
+    <div class="test-section">
+        <h2>Direct Image Test</h2>
+        <p>If you can see the images below, the favicon files are accessible:</p>
+        <div style="display: flex; gap: 20px; align-items: center;">
+            <div>
+                <strong>favicon.ico:</strong><br>
+                <img src="favicon.ico" alt="favicon.ico" onerror="this.style.border='2px solid red'; this.title='Failed to load';">
+            </div>
+            <div>
+                <strong>favicon.png:</strong><br>
+                <img src="images/favicon.png" alt="favicon.png" onerror="this.style.border='2px solid red'; this.title='Failed to load';">
+            </div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Browser Compatibility</h2>
+        <p>This page uses the most compatible favicon setup:</p>
+        <ul>
+            <li><code>favicon.ico</code> - Traditional format, works in all browsers</li>
+            <li><code>apple-touch-icon</code> - For iOS devices</li>
+            <li>Absolute paths (<code>/favicon.ico</code>) - Prevents path issues</li>
+        </ul>
+    </div>
+    
+    <div class="info">
+        <h3>🔧 Troubleshooting</h3>
+        <p>If you don't see the favicon:</p>
+        <ol>
+            <li><strong>Clear browser cache</strong> - Ctrl+Shift+Del (Windows) or Cmd+Shift+Del (Mac)</li>
+            <li><strong>Hard refresh</strong> - Ctrl+F5 (Windows) or Cmd+Shift+R (Mac)</li>
+            <li><strong>Check developer tools</strong> - F12 → Network tab → Look for favicon requests</li>
+            <li><strong>Try different browser</strong> - Sometimes browser-specific issues occur</li>
+        </ol>
+    </div>
+    
+    <div class="test-section">
+        <h2>Direct Access Links</h2>
+        <p>Test these URLs directly:</p>
+        <ul>
+            <li><a href="favicon.ico" target="_blank">favicon.ico</a></li>
+            <li><a href="images/favicon.png" target="_blank">images/favicon.png</a></li>
+        </ul>
+    </div>
+</body>
+</html>

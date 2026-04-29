@@ -1,0 +1,40 @@
+
+
+2025-04-23 09:30:57 - Starting index.php
+Session started. Session ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+Session data: Array
+(
+)
+
+Checking login status
+Login check failed - redirecting to login.php
+
+
+2025-04-23 09:34:59 - Starting index.php
+Session started. Session ID: 0c39fe9f504bd97e4fedd0f365ed5caf
+Session data: Array
+(
+)
+
+Checking login status
+Login check failed - redirecting to login.php
+
+
+2025-04-23 09:57:28 - Starting index.php
+Session started. Session ID: 89a9c82945eccdaecd9de0272faf3050
+Session data: Array
+(
+)
+
+Checking login status
+Login check failed - redirecting to login.php
+
+
+2025-04-23 09:59:47 - Starting index.php
+Session started. Session ID: be789a48e18e26532b73908db1e1f41b
+Session data: Array
+(
+)
+
+Checking login status
+Login check failed - redirecting to login.php

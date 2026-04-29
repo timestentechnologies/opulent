@@ -1,0 +1,51 @@
+2025-05-11 11:21:47 - Found 2 orders requiring email notifications
+2025-05-11 11:21:47 - Processing order #134
+2025-05-11 11:21:52 - Email sent and order #134 marked as processed
+2025-05-11 11:21:52 - Processing order #131
+2025-05-11 11:21:57 - Email sent and order #131 marked as processed
+2025-05-11 11:22:59 - Found 1 orders requiring email notifications
+2025-05-11 11:22:59 - Processing order #135
+2025-05-11 11:23:05 - Email sent and order #135 marked as processed
+2025-05-11 09:44:28 - Error: Unknown column 'o.email_sent' in 'WHERE'
+2025-05-11 09:44:36 - Error: Unknown column 'o.email_sent' in 'WHERE'
+2025-05-11 09:45:09 - Error: Unknown column 'o.email_sent' in 'WHERE'
+2025-05-11 09:46:16 - Error: Unknown column 'o.email_sent' in 'WHERE'
+2025-05-11 09:47:27 - Found 5 orders requiring email notifications
+2025-05-11 09:47:27 - Processing order #127
+2025-05-11 09:47:28 - Email sent and order #127 marked as processed
+2025-05-11 09:47:28 - Processing order #125
+2025-05-11 09:47:29 - Email sent and order #125 marked as processed
+2025-05-11 09:47:29 - Processing order #124
+2025-05-11 09:47:31 - Email sent and order #124 marked as processed
+2025-05-11 09:47:31 - Processing order #123
+2025-05-11 09:47:33 - Email sent and order #123 marked as processed
+2025-05-11 09:47:33 - Processing order #122
+2025-05-11 09:47:35 - Email sent and order #122 marked as processed
+2025-05-11 10:02:33 - Found 4 orders requiring email notifications
+2025-05-11 10:02:33 - Processing order #128
+2025-05-11 10:02:34 - Email sent and order #128 marked as processed
+2025-05-11 10:02:34 - Processing order #121
+2025-05-11 10:02:36 - Email sent and order #121 marked as processed
+2025-05-11 10:02:36 - Processing order #120
+2025-05-11 10:02:38 - Email sent and order #120 marked as processed
+2025-05-11 10:02:38 - Processing order #119
+2025-05-11 10:02:39 - Email sent and order #119 marked as processed
+2025-05-11 10:46:42 - Found 1 orders requiring email notifications
+2025-05-11 10:46:42 - Processing order #133
+2025-05-11 10:46:43 - Email sent and order #133 marked as processed
+2025-05-12 14:21:27 - Found 1 orders requiring email notifications
+2025-05-12 14:21:27 - Processing order #135
+2025-05-12 14:21:29 - Email sent and order #135 marked as processed
+2025-05-29 16:18:31 - Found 1 orders requiring email notifications
+2025-05-29 16:18:31 - Processing order #136
+2025-05-29 16:18:33 - Email sent and order #136 marked as processed
+2026-02-25 13:49:33 - Found 2 orders requiring email notifications
+2026-02-25 13:49:33 - Processing order #138
+2026-02-25 13:49:33 - Failed to send notification for order #138
+2026-02-25 13:49:33 - Processing order #137
+2026-02-25 13:49:34 - Failed to send notification for order #137
+2026-02-26 05:05:10 - Found 2 orders requiring email notifications
+2026-02-26 05:05:10 - Processing order #138
+2026-02-26 05:05:11 - Failed to send notification for order #138
+2026-02-26 05:05:11 - Processing order #137
+2026-02-26 05:05:12 - Failed to send notification for order #137

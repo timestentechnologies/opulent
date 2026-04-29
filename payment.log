@@ -1,0 +1,509 @@
+====== Payment Request 2025-04-27 16:53:58 ======
+POST data: Array
+(
+    [subscription_id] => 4
+    [payment_method] => mpesa_manual
+    [phone_number] => 254718883983
+    [mpesa_code] => AQ23DE4567
+)
+
+SESSION: Array
+(
+    [customer_id] => 3
+    [customer_name] => Timesten Kenya
+    [last_order_time] => 1745759601
+)
+
+Found phone number in 'phone_number': 254718883983
+MPESA code: AQ23DE4567
+Final values: subscription_id=4, user_id=3, phone=254718883983, code=AQ23DE4567, status=verifying
+Database connection successful
+SQL Query: UPDATE user_subscriptions SET 
+            status = 'verifying', 
+            payment_method = 'mpesa_manual',
+            mobile = '254718883983',
+            code = 'AQ23DE4567'
+            WHERE id = 4
+ERROR: Database update failed: Unknown column 'payment_method' in 'field list'
+Response: {
+    "success": true,
+    "message": "Payment processed successfully!",
+    "data": {
+        "subscription_id": 4,
+        "status": "verifying",
+        "method": "mpesa_manual",
+        "phone": "254718883983",
+        "code": "AQ23DE4567"
+    },
+    "debug": {
+        "post_data": {
+            "subscription_id": "4",
+            "payment_method": "mpesa_manual",
+            "phone_number": "254718883983",
+            "mpesa_code": "AQ23DE4567"
+        },
+        "session": {
+            "customer_id": 3
+        },
+        "database_result": {
+            "success": false,
+            "message": "Database update failed: Unknown column 'payment_method' in 'field list'",
+            "query": "UPDATE user_subscriptions SET \r\n            status = 'verifying', \r\n            payment_method = 'mpesa_manual',\r\n            mobile = '254718883983',\r\n            code = 'AQ23DE4567'\r\n            WHERE id = 4",
+            "affected_rows": 0
+        }
+    }
+}
+====== End Request ======
+
+====== Payment Request 2025-04-27 16:54:25 ======
+POST data: Array
+(
+    [subscription_id] => 4
+    [payment_method] => mpesa_manual
+    [phone_number] => 254718883983
+    [mpesa_code] => AQ23DE4567
+)
+
+SESSION: Array
+(
+    [customer_id] => 3
+    [customer_name] => Timesten Kenya
+    [last_order_time] => 1745759601
+)
+
+Found phone number in 'phone_number': 254718883983
+MPESA code: AQ23DE4567
+Final values: subscription_id=4, user_id=3, phone=254718883983, code=AQ23DE4567, status=verifying
+Database connection successful
+SQL Query: UPDATE user_subscriptions SET 
+            status = 'verifying', 
+            payment_method = 'mpesa_manual',
+            mobile = '254718883983',
+            code = 'AQ23DE4567'
+            WHERE id = 4
+ERROR: Database update failed: Unknown column 'payment_method' in 'field list'
+Response: {
+    "success": true,
+    "message": "Payment processed successfully!",
+    "data": {
+        "subscription_id": 4,
+        "status": "verifying",
+        "method": "mpesa_manual",
+        "phone": "254718883983",
+        "code": "AQ23DE4567"
+    },
+    "debug": {
+        "post_data": {
+            "subscription_id": "4",
+            "payment_method": "mpesa_manual",
+            "phone_number": "254718883983",
+            "mpesa_code": "AQ23DE4567"
+        },
+        "session": {
+            "customer_id": 3
+        },
+        "database_result": {
+            "success": false,
+            "message": "Database update failed: Unknown column 'payment_method' in 'field list'",
+            "query": "UPDATE user_subscriptions SET \r\n            status = 'verifying', \r\n            payment_method = 'mpesa_manual',\r\n            mobile = '254718883983',\r\n            code = 'AQ23DE4567'\r\n            WHERE id = 4",
+            "affected_rows": 0
+        }
+    }
+}
+====== End Request ======
+
+====== Payment Request 2025-04-27 16:57:05 ======
+POST data: Array
+(
+    [subscription_id] => 4
+    [payment_method] => mpesa_manual
+    [phone_number] => 254718883983
+    [mpesa_code] => AQ23DE4567
+)
+
+SESSION: Array
+(
+    [customer_id] => 3
+    [customer_name] => Timesten Kenya
+    [last_order_time] => 1745759601
+)
+
+Found phone number in 'phone_number': 254718883983
+MPESA code: AQ23DE4567
+Final values: subscription_id=4, user_id=3, phone=254718883983, code=AQ23DE4567, status=verifying
+Database connection successful
+SQL Query: UPDATE user_subscriptions SET 
+            status = 'verifying', 
+            mobile = '254718883983',
+            code = 'AQ23DE4567'
+            WHERE id = 4
+Update successful! Affected rows: 1
+Verification - Mobile: 254718883983, Code: AQ23DE4567
+Response: {
+    "success": true,
+    "message": "Payment processed successfully!",
+    "data": {
+        "subscription_id": 4,
+        "status": "verifying",
+        "method": "mpesa_manual",
+        "phone": "254718883983",
+        "code": "AQ23DE4567"
+    },
+    "debug": {
+        "post_data": {
+            "subscription_id": "4",
+            "payment_method": "mpesa_manual",
+            "phone_number": "254718883983",
+            "mpesa_code": "AQ23DE4567"
+        },
+        "session": {
+            "customer_id": 3
+        },
+        "database_result": {
+            "success": true,
+            "message": "Update successful, affected rows: 1",
+            "query": "UPDATE user_subscriptions SET \r\n            status = 'verifying', \r\n            mobile = '254718883983',\r\n            code = 'AQ23DE4567'\r\n            WHERE id = 4",
+            "affected_rows": 1,
+            "verification": {
+                "mobile": "254718883983",
+                "code": "AQ23DE4567"
+            }
+        }
+    }
+}
+====== End Request ======
+
+
+====== Payment Request 2025-04-27 17:04:09 ======
+POST data: Array
+(
+    [order_id] => 58
+    [payment_method] => mpesa_manual
+    [mpesa_number] => 254718883983
+    [phone_number] => 254718883983
+    [mpesa_code] => AQ23DE4567
+    [amount] => 100.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 3
+    [customer_name] => Timesten Kenya
+    [last_order_time] => 1745759601
+)
+
+Attempting to update order #58 with mpesa_number=254718883983, mpesa_code=AQ23DE4567
+SUCCESS: Order #58 updated successfully with payment details
+====== End Request ======
+
+
+====== Payment Request 2025-04-27 17:07:25 ======
+POST data: Array
+(
+    [order_id] => 76
+    [payment_method] => mpesa_manual
+    [mpesa_number] => 254718883983
+    [phone_number] => 254718883983
+    [mpesa_code] => AQ23DE4567
+    [amount] => 70880.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 3
+    [customer_name] => Timesten Kenya
+    [last_order_time] => 1745759601
+)
+
+Attempting to update order #76 with mpesa_number=254718883983, mpesa_code=AQ23DE4567
+SUCCESS: Order #76 updated successfully with payment details
+====== End Request ======
+
+
+====== Payment Request 2025-04-27 17:13:18 ======
+POST data: Array
+(
+    [order_id] => 50
+    [payment_method] => mpesa_manual
+    [mpesa_number] => 254718883983
+    [phone_number] => 254718883983
+    [mpesa_code] => AQ23DE4567
+    [amount] => 480.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 3
+    [customer_name] => Timesten Kenya
+    [last_order_time] => 1745759601
+)
+
+Attempting to update order #50 with mpesa_number=254718883983, mpesa_code=AQ23DE4567
+Update result: affected_rows=1
+SUCCESS: Order #50 updated successfully with payment details
+====== End Request ======
+
+
+====== Payment Request 2025-05-01 08:19:33 ======
+POST data: Array
+(
+    [order_id] => 122
+    [payment_method] => mpesa
+    [mpesa_number] => 0728441514
+    [phone_number] => 
+    [mpesa_code] => 
+    [amount] => 550.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 12
+    [customer_email] => mokayageofrey5@gmail.com
+    [customer_name] => Geofrey Mokaya
+    [last_order_time] => 1746087183
+)
+
+ERROR: Invalid payment method
+#0 {main}
+====== End Request ======
+
+
+====== Payment Request 2025-05-01 08:19:36 ======
+POST data: Array
+(
+    [order_id] => 122
+    [payment_method] => mpesa
+    [mpesa_number] => 0728441514
+    [phone_number] => 
+    [mpesa_code] => 
+    [amount] => 550.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 12
+    [customer_email] => mokayageofrey5@gmail.com
+    [customer_name] => Geofrey Mokaya
+    [last_order_time] => 1746087183
+)
+
+ERROR: Invalid payment method
+#0 {main}
+====== End Request ======
+
+
+====== Payment Request 2025-05-01 08:21:43 ======
+POST data: Array
+(
+    [order_id] => 122
+    [payment_method] => mpesa_manual
+    [mpesa_number] => 254728441514
+    [phone_number] => 254728441514
+    [mpesa_code] => TE15X976KF
+    [amount] => 550.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 12
+    [customer_email] => mokayageofrey5@gmail.com
+    [customer_name] => Geofrey Mokaya
+    [last_order_time] => 1746087183
+)
+
+Attempting to update order #122 with mpesa_number=254728441514, mpesa_code=TE15X976KF
+Update result: affected_rows=1
+SUCCESS: Order #122 updated successfully with payment details
+====== End Request ======
+
+
+====== Payment Request 2025-05-11 11:38:56 ======
+POST data: Array
+(
+    [order_id] => 131
+    [payment_method] => mpesa_manual
+    [mpesa_number] => 254718883983
+    [phone_number] => 254718883983
+    [mpesa_code] => QWEE2323E3
+    [amount] => 3200.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 14
+    [customer_name] => Alex Mwangi
+)
+
+Attempting to update order #131 with mpesa_number=254718883983, mpesa_code=QWEE2323E3
+Update result: affected_rows=1
+SUCCESS: Order #131 updated successfully with payment details
+====== End Request ======
+
+
+====== Payment Request 2025-12-11 07:45:59 ======
+POST data: Array
+(
+    [order_id] => 137
+    [payment_method] => mpesa
+    [mpesa_number] => 254757683174
+    [phone_number] => 
+    [mpesa_code] => 
+    [amount] => 375.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 17
+    [customer_email] => mainagloria0@gmail.com
+    [customer_name] => Gloria Maina
+    [last_order_time] => 1765439029
+)
+
+ERROR: Invalid payment method
+#0 {main}
+====== End Request ======
+
+
+====== Payment Request 2025-12-11 07:46:07 ======
+POST data: Array
+(
+    [order_id] => 137
+    [payment_method] => mpesa
+    [mpesa_number] => 0757683174
+    [phone_number] => 
+    [mpesa_code] => 
+    [amount] => 375.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 17
+    [customer_email] => mainagloria0@gmail.com
+    [customer_name] => Gloria Maina
+    [last_order_time] => 1765439029
+)
+
+ERROR: Invalid payment method
+#0 {main}
+====== End Request ======
+
+
+====== Payment Request 2025-12-11 07:46:19 ======
+POST data: Array
+(
+    [order_id] => 137
+    [payment_method] => mpesa
+    [mpesa_number] => +254757683174
+    [phone_number] => 
+    [mpesa_code] => 
+    [amount] => 375.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 17
+    [customer_email] => mainagloria0@gmail.com
+    [customer_name] => Gloria Maina
+    [last_order_time] => 1765439029
+)
+
+ERROR: Invalid payment method
+#0 {main}
+====== End Request ======
+
+
+====== Payment Request 2025-12-11 07:46:37 ======
+POST data: Array
+(
+    [order_id] => 137
+    [payment_method] => mpesa
+    [mpesa_number] => 254757683174
+    [phone_number] => 
+    [mpesa_code] => 
+    [amount] => 375.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 17
+    [customer_email] => mainagloria0@gmail.com
+    [customer_name] => Gloria Maina
+    [last_order_time] => 1765439029
+)
+
+ERROR: Invalid payment method
+#0 {main}
+====== End Request ======
+
+
+====== Payment Request 2025-12-11 07:47:53 ======
+POST data: Array
+(
+    [order_id] => 137
+    [payment_method] => mpesa
+    [mpesa_number] => 254757683174
+    [phone_number] => 
+    [mpesa_code] => 
+    [amount] => 375.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 17
+    [customer_email] => mainagloria0@gmail.com
+    [customer_name] => Gloria Maina
+    [last_order_time] => 1765439029
+)
+
+ERROR: Invalid payment method
+#0 {main}
+====== End Request ======
+
+
+====== Payment Request 2025-12-11 07:47:55 ======
+POST data: Array
+(
+    [order_id] => 137
+    [payment_method] => mpesa
+    [mpesa_number] => 254757683174
+    [phone_number] => 
+    [mpesa_code] => 
+    [amount] => 375.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 17
+    [customer_email] => mainagloria0@gmail.com
+    [customer_name] => Gloria Maina
+    [last_order_time] => 1765439029
+)
+
+ERROR: Invalid payment method
+#0 {main}
+====== End Request ======
+
+
+====== Payment Request 2025-12-11 07:47:57 ======
+POST data: Array
+(
+    [order_id] => 137
+    [payment_method] => mpesa
+    [mpesa_number] => 254757683174
+    [phone_number] => 
+    [mpesa_code] => 
+    [amount] => 375.00
+)
+
+SESSION: Array
+(
+    [customer_id] => 17
+    [customer_email] => mainagloria0@gmail.com
+    [customer_name] => Gloria Maina
+    [last_order_time] => 1765439029
+)
+
+ERROR: Invalid payment method
+#0 {main}
+====== End Request ======
+

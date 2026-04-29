@@ -1,0 +1,17 @@
+=== Database Update Test: 2025-04-27 16:44:34 ===
+Starting database update test
+Test values - ID: 4, Phone: 254722123456, Code: TEST123CODE
+Attempting to connect to database...
+Using admin/connect.php
+Database connection successful
+Table user_subscriptions exists
+Successfully retrieved table structure
+All columns: id, customer_id, plan_id, start_date, end_date, status, created_at, mobile, code
+Checking if subscription with ID 4 exists...
+Found subscription - Current mobile: 254722123456, code: TESTCODE123
+Attempting to update subscription...
+SQL Query: UPDATE user_subscriptions SET mobile = '254722123456', code = 'TEST123CODE' WHERE id = 4
+Update successful! Affected rows: 1
+FINAL VALUES - Mobile: 254722123456, Code: TEST123CODE
+Database connection closed
+Test completed

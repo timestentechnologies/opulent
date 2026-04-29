@@ -1,0 +1,1 @@
+ALTER TABLE `order` ADD COLUMN `mpesa_code` VARCHAR(20) DEFAULT NULL AFTER `payment_method`; 

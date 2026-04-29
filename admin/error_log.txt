@@ -1,0 +1,72 @@
+Starting user creation process - 2025-05-11 12:43:15
+Script started
+Connection included
+POST data received: Array
+(
+    [currnt_date] => <br />
+<b>Warning</b>:  Undefined variable $currnt_date in <b>/home3/opulentl/admin.opulentlaundry.co.ke/add_user.php</b> on line <b>50</b><br />
+
+    [fname] => Timesten
+    [lname] => Kenya
+    [email] => timestenkenya@gmail.com
+    [password] => 1234567890
+    [gender] => Male
+    [dob] => 2025-05-01
+    [contact] => 0748909879
+    [address] => 672
+    [group_id] => 2
+    [btn_save] => 
+)
+
+Sanitized data processed
+SQL Query: INSERT INTO admin (username, email, password, fname, lname, gender, dob, contact, address, created_on, image, group_id)
+            VALUES ('timestenkenya', 'timestenkenya@gmail.com', 'c775e7b757ede630cd0aa1113bd102661ab38829ca52a6422ab782862f268646', 'Timesten', 'Kenya', 'Male', '2025-05-01', '0748909879', '672', '2025-05-11', '', '2')
+Insert successful
+Starting user creation process - 2025-05-11 12:43:46
+Script started
+Connection included
+POST data received: Array
+(
+    [currnt_date] => <br />
+<b>Warning</b>:  Undefined variable $currnt_date in <b>/home3/opulentl/admin.opulentlaundry.co.ke/add_user.php</b> on line <b>50</b><br />
+
+    [fname] => Timesten
+    [lname] => Kenya
+    [email] => timestenkenya@gmail.com
+    [password] => 1234567890
+    [gender] => Male
+    [dob] => 2025-05-14
+    [contact] => 0748909879
+    [address] => 672
+    [group_id] => 2
+    [btn_save] => 
+)
+
+Sanitized data processed
+SQL Query: INSERT INTO admin (username, email, password, fname, lname, gender, dob, contact, address, created_on, image, group_id)
+            VALUES ('timestenkenya', 'timestenkenya@gmail.com', 'c775e7b757ede630cd0aa1113bd102661ab38829ca52a6422ab782862f268646', 'Timesten', 'Kenya', 'Male', '2025-05-14', '0748909879', '672', '2025-05-11', '', '2')
+Insert successful
+Starting user creation process - 2025-05-11 12:50:55
+Script started
+Connection included
+POST data received: Array
+(
+    [currnt_date] => <br />
+<b>Warning</b>:  Undefined variable $currnt_date in <b>/home3/opulentl/admin.opulentlaundry.co.ke/add_user.php</b> on line <b>50</b><br />
+
+    [fname] => Timesten
+    [lname] => Kenya
+    [email] => timestenkenya@gmail.com
+    [password] => 1234567890
+    [gender] => Male
+    [dob] => 2025-05-15
+    [contact] => 0748909879
+    [address] => 672
+    [group_id] => 2
+    [btn_save] => 
+)
+
+Sanitized data processed
+SQL Query: INSERT INTO admin (username, email, password, fname, lname, gender, dob, contact, address, created_on, image, group_id)
+            VALUES ('timestenkenya', 'timestenkenya@gmail.com', 'c775e7b757ede630cd0aa1113bd102661ab38829ca52a6422ab782862f268646', 'Timesten', 'Kenya', 'Male', '2025-05-15', '0748909879', '672', '2025-05-11', '', '2')
+Insert successful

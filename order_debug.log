@@ -1,0 +1,147 @@
+
+====== New Order Request ======
+2025-04-27 16:19:39
+Session state: Array
+(
+    [customer_id] => 3
+    [customer_name] => Timesten Kenya
+    [last_order_time] => 1745770179
+)
+
+POST data: Array
+(
+    [service_id] => 16
+    [weight] => 341
+    [description] => 33443
+    [pickup_date] => 2025-05-03
+    [delivery_date] => 2025-04-24
+)
+
+Attempting database connection...
+Database connection successful
+
+====== New Order Request ======
+2025-04-27 16:20:32
+Session state: Array
+(
+    [customer_id] => 3
+    [customer_name] => Timesten Kenya
+    [last_order_time] => 1745770779
+)
+
+POST data: Array
+(
+    [service_id] => 16
+    [weight] => 341
+    [description] => 33443
+    [pickup_date] => 2025-05-03
+    [delivery_date] => 2025-04-24
+)
+
+Attempting database connection...
+Database connection successful
+
+====== New Order Request ======
+2025-04-27 16:24:31
+Session state: Array
+(
+    [customer_id] => 3
+    [customer_name] => Timesten Kenya
+    [last_order_time] => 1745770832
+)
+
+POST data: Array
+(
+    [service_id] => 14
+    [weight] => 34
+    [description] => ggg
+    [pickup_date] => 2025-04-26
+    [delivery_date] => 2025-05-09
+)
+
+Attempting database connection...
+Database connection successful
+
+====== New Order Request ======
+2025-04-27 16:24:51
+Session state: Array
+(
+    [customer_id] => 3
+    [customer_name] => Timesten Kenya
+    [last_order_time] => 1745771071
+)
+
+POST data: Array
+(
+    [service_id] => 14
+    [weight] => 34
+    [description] => ggg
+    [pickup_date] => 2025-04-26
+    [delivery_date] => 2025-05-09
+)
+
+Attempting database connection...
+Database connection successful
+
+====== New Order Request ======
+2025-04-27 16:25:00
+Session state: Array
+(
+    [customer_id] => 3
+    [customer_name] => Timesten Kenya
+    [last_order_time] => 1745771091
+)
+
+POST data: Array
+(
+    [service_id] => 14
+    [weight] => 34
+    [description] => ggg
+    [pickup_date] => 2025-04-26
+    [delivery_date] => 2025-05-09
+)
+
+Attempting database connection...
+Database connection successful
+
+====== New Order Request ======
+2025-04-27 16:46:31
+Session state: Array
+(
+    [customer_id] => 3
+    [customer_name] => Timesten Kenya
+    [last_order_time] => 1745771100
+)
+
+POST data: Array
+(
+    [service_id] => 4
+    [weight] => 23
+    [description] => dfdfff
+    [pickup_date] => 2025-05-10
+    [delivery_date] => 2025-04-24
+)
+
+Attempting database connection...
+Database connection successful
+
+====== New Order Request ======
+2025-04-27 16:47:23
+Session state: Array
+(
+    [customer_id] => 3
+    [customer_name] => Timesten Kenya
+    [last_order_time] => 1745772391
+)
+
+POST data: Array
+(
+    [service_id] => 4
+    [weight] => 23
+    [description] => dfdfff
+    [pickup_date] => 2025-05-10
+    [delivery_date] => 2025-04-24
+)
+
+Attempting database connection...
+Database connection successful
