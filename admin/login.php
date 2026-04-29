@@ -203,7 +203,17 @@ if(isset($_POST['btn_login']))
     <script src="../js/password-toggle.js"></script>
 
     <script>
+        var __loginErrorModalLastFocus = null;
+
         function forceCloseLoginErrorModal() {
+            try {
+                if (document.activeElement && document.activeElement instanceof HTMLElement) {
+                    document.activeElement.blur();
+                }
+            } catch (e) {
+                // no-op
+            }
+
             var modal = document.getElementById('loginErrorModal');
             if (modal) {
                 modal.classList.remove('show');
@@ -219,6 +229,16 @@ if(isset($_POST['btn_login']))
             backdrops.forEach(function(bd) {
                 if (bd && bd.parentNode) bd.parentNode.removeChild(bd);
             });
+
+            try {
+                if (__loginErrorModalLastFocus && typeof __loginErrorModalLastFocus.focus === 'function') {
+                    __loginErrorModalLastFocus.focus();
+                } else {
+                    document.body.focus();
+                }
+            } catch (e) {
+                // no-op
+            }
         }
 
         document.addEventListener('keydown', function(e) {
@@ -238,10 +258,21 @@ if(isset($_POST['btn_login']))
                 }
 
                 var $m = jQuery('#loginErrorModal');
+                try {
+                    __loginErrorModalLastFocus = document.activeElement;
+                } catch (e) {
+                    __loginErrorModalLastFocus = null;
+                }
                 $m.modal({ show: true, backdrop: true, keyboard: true });
 
                 jQuery('.modal-backdrop').css('z-index', '99998');
                 $m.css('z-index', '100000');
+
+                try {
+                    $m.attr('aria-hidden', 'false');
+                } catch (e) {
+                    // no-op
+                }
 
                 $m.on('click', '[data-dismiss="modal"], .close', function() {
                     try {
