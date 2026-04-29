@@ -323,8 +323,16 @@ foreach ($method_keys as $k) {
 </div>
 <!-- End Wrapper -->
 
+<style>
+    .modal-dialog.modal-compact { max-width: 520px; }
+    .modal-dialog.modal-compact-sm { max-width: 460px; }
+    .modal-body { padding: 15px 20px; }
+    .modal-header, .modal-footer { padding: 12px 20px; }
+    .modal-body .form-group { margin-bottom: 10px; }
+</style>
+
 <div class="modal fade" id="paypalModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-compact" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">PayPal Configuration</h5>
@@ -361,7 +369,7 @@ foreach ($method_keys as $k) {
 </div>
 
 <div class="modal fade" id="stripeModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-compact" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Stripe Configuration</h5>
@@ -398,7 +406,7 @@ foreach ($method_keys as $k) {
 </div>
 
 <div class="modal fade" id="mpesaModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-compact" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">M-Pesa STK Push Configuration</h5>
@@ -443,7 +451,7 @@ foreach ($method_keys as $k) {
 </div>
 
 <div class="modal fade" id="methodModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-compact-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Edit Payment Method</h5>
@@ -492,7 +500,7 @@ foreach ($method_keys as $k) {
                     </div>
                     <div class="form-group">
                         <label>Instructions</label>
-                        <textarea class="form-control" name="instructions" id="instructions" rows="3"></textarea>
+                        <textarea class="form-control" name="instructions" id="instructions" rows="2"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -504,57 +512,54 @@ foreach ($method_keys as $k) {
     </div>
 </div>
 
-<!-- All Jquery -->
-<script src="js/lib/jquery/jquery.min.js"></script>
-<!-- Bootstrap tether Core JavaScript -->
-<script src="js/lib/bootstrap/js/popper.min.js"></script>
-<script src="js/lib/bootstrap/js/bootstrap.min.js"></script>
-<!-- slimscrollbar scrollbar JavaScript -->
-<script src="js/jquery.slimscroll.js"></script>
-<!--Menu sidebar -->
-<script src="js/sidebarmenu.js"></script>
-<!--stickey kit -->
-<script src="js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
-<!--Custom JavaScript -->
-<script src="js/custom.min.js"></script>
-
 <script>
-$('#methodModal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget);
-    var methodKey = button.data('method-key') || '';
+    $('#methodModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var methodKey = button.data('method-key') || '';
 
-    var displayName = button.data('display-name') || '';
-    var enabled = button.data('enabled');
-    enabled = (enabled === 1 || enabled === '1') ? '1' : '0';
+        var displayName = button.data('display-name') || '';
+        var enabled = button.data('enabled');
+        enabled = (enabled === 1 || enabled === '1') ? '1' : '0';
 
-    var provider = button.data('provider') || '';
-    var accountName = button.data('account-name') || '';
-    var phone = button.data('phone') || '';
-    var tillNumber = button.data('till-number') || '';
-    var paybillNumber = button.data('paybill-number') || '';
-    var accountNumber = button.data('account-number') || '';
-    var instructions = button.data('instructions') || '';
+        var provider = button.data('provider') || '';
+        var accountName = button.data('account-name') || '';
+        var phone = button.data('phone') || '';
+        var tillNumber = button.data('till-number') || '';
+        var paybillNumber = button.data('paybill-number') || '';
+        var accountNumber = button.data('account-number') || '';
+        var instructions = button.data('instructions') || '';
 
-    $('#method_key').val(methodKey);
-    $('#display_name').val(displayName);
-    $('#enabled').val(enabled);
-    $('#provider').val(provider);
-    $('#account_name').val(accountName);
-    $('#phone').val(phone);
-    $('#till_number').val(tillNumber);
-    $('#paybill_number').val(paybillNumber);
-    $('#account_number').val(accountNumber);
-    $('#instructions').val(instructions);
+        $('#method_key').val(methodKey);
+        $('#display_name').val(displayName);
+        $('#enabled').val(enabled);
+        $('#provider').val(provider);
+        $('#account_name').val(accountName);
+        $('#phone').val(phone);
+        $('#till_number').val(tillNumber);
+        $('#paybill_number').val(paybillNumber);
+        $('#account_number').val(accountNumber);
+        $('#instructions').val(instructions);
 
-    var isTill = methodKey === 'method_till';
-    var isPaybill = methodKey === 'method_paybill';
-    var isCod = methodKey === 'method_cod';
+        var isTill = methodKey === 'method_till';
+        var isPaybill = methodKey === 'method_paybill';
+        var isCod = methodKey === 'method_cod';
 
-    $('#phone_group').toggle(!isTill && !isPaybill && !isCod);
-    $('#till_group').toggle(isTill);
-    $('#paybill_group').toggle(isPaybill);
-    $('#account_number_group').toggle(isPaybill);
-});
+        $('#phone_group').toggle(!isTill && !isPaybill && !isCod);
+        $('#till_group').toggle(isTill);
+        $('#paybill_group').toggle(isPaybill);
+        $('#account_number_group').toggle(isPaybill);
+
+        var defaultInstructions = {
+            method_send_money: 'M-Pesa > Send Money > Enter phone number and amount > Confirm with PIN.',
+            method_pochi: 'M-Pesa > Pochi La Biashara > Enter Pochi number and amount > Confirm with PIN.',
+            method_till: 'M-Pesa > Lipa na M-Pesa > Buy Goods > Enter Till Number and amount > Confirm with PIN.',
+            method_paybill: 'M-Pesa > Lipa na M-Pesa > Paybill > Enter Business No. and Account No. > Enter amount > Confirm with PIN.',
+            method_cod: 'Customer pays cash upon delivery/pickup. Record payment after receiving cash.'
+        };
+
+        if (!instructions && defaultInstructions[methodKey]) {
+            instructions = defaultInstructions[methodKey];
+        }
+        $('#instructions').val(instructions);
+    });
 </script>
-</body>
-</html>
