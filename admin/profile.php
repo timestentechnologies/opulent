@@ -27,8 +27,9 @@ if(isset($_POST["btn_update"]))
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("sssssssi", $fname, $lname, $email, $contact, $dob, $gender, basename($_FILES["image"]["name"]), $_SESSION["id"]);
         } else {
-            echo "<script>alert('Sorry, there was an error uploading your file.');</script>";
-            return;
+            $_SESSION['error'] = 'Sorry, there was an error uploading your file.';
+            header('Location: profile.php');
+            exit;
         }
     } else {
         $sql = "UPDATE admin SET fname=?, lname=?, email=?, contact=?, dob=?, gender=? WHERE id=?";
@@ -43,9 +44,13 @@ if(isset($_POST["btn_update"]))
         if($_FILES["image"]["tmp_name"] != '') {
             $_SESSION["image"] = basename($_FILES["image"]["name"]);
         }
-        echo "<script>alert('Profile Updated Successfully'); window.location.reload();</script>";
+        $_SESSION['success'] = 'Profile Updated Successfully';
+        header('Location: profile.php');
+        exit;
     } else {
-        echo "<script>alert('Error updating profile');</script>";
+        $_SESSION['error'] = 'Error updating profile';
+        header('Location: profile.php');
+        exit;
     }
 }
 ?> 
