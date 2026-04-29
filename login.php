@@ -120,32 +120,34 @@ transform: rotate(45deg);
 }
 </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
-<?php include 'includes/navigation.php'; ?>
+ <body class="bg-gray-50 min-h-screen">
+ <?php include 'includes/navigation.php'; ?>
 
-<!-- Error Modal -->
-<div id="errorModal" class="fixed inset-0 bg-black bg-opacity-50 z-[100] hidden">
-    <div class="flex items-center justify-center min-h-screen p-4">
-        <div class="bg-white rounded-lg shadow-xl max-w-md w-full relative">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-bold text-red-600">Error</h3>
-                    <button onclick="closeErrorModal()" class="text-gray-500 hover:text-gray-700">
-                        <i class="ri-close-line text-2xl"></i>
-                    </button>
-                </div>
-                <div class="text-gray-700 mb-6">
-                    <p id="errorMessage">Invalid Email or Password</p>
-                </div>
-                <div class="flex justify-end">
-                    <button onclick="closeErrorModal()" class="px-6 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition">
-                        Close
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+ <div id="loginErrorModal" class="fixed inset-0 bg-black bg-opacity-50 z-[101] hidden" aria-labelledby="login-error-title" role="dialog" aria-modal="true">
+     <div class="flex items-center justify-center min-h-screen p-4">
+         <div class="bg-white rounded-lg shadow-xl max-w-md w-full relative">
+             <div class="p-6">
+                 <div class="flex justify-between items-center mb-4">
+                     <h3 id="login-error-title" class="text-xl font-bold text-gray-900">Error</h3>
+                     <button type="button" onclick="closeLoginErrorModal()" class="text-gray-500 hover:text-gray-700">
+                         <i class="ri-close-line text-2xl"></i>
+                     </button>
+                 </div>
+                 <div class="space-y-4">
+                     <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                         <i class="ri-close-line text-red-500 text-3xl"></i>
+                     </div>
+                     <div class="text-center mb-4">
+                         <p id="loginErrorMessage" class="text-gray-600"></p>
+                     </div>
+                 </div>
+                 <div class="mt-6 flex justify-end">
+                     <button type="button" onclick="closeLoginErrorModal()" class="px-6 py-2 bg-primary text-white rounded-md hover:bg-opacity-90 transition">Close</button>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
 
 <!-- Main Content -->
 <main class="flex-grow flex items-center justify-center py-12 px-4">
@@ -156,13 +158,28 @@ transform: rotate(45deg);
 <p class="text-gray-600">Login to your FreshPress account</p>
 </div>
 
-<?php if ($error): ?>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            showErrorModal('<?php echo addslashes($error); ?>');
-        });
-    </script>
-<?php endif; ?>
+ <?php if ($error): ?>
+ <script>
+ (function() {
+     function openLoginErrorModal(message) {
+         var modal = document.getElementById('loginErrorModal');
+         var msg = document.getElementById('loginErrorMessage');
+         if (!modal || !msg) return;
+         msg.textContent = message || 'Login failed. Please try again.';
+         modal.classList.remove('hidden');
+         document.body.style.overflow = 'hidden';
+     }
+ 
+     if (document.readyState === 'loading') {
+         document.addEventListener('DOMContentLoaded', function() {
+             openLoginErrorModal(<?php echo json_encode($error); ?>);
+         });
+     } else {
+         openLoginErrorModal(<?php echo json_encode($error); ?>);
+     }
+ })();
+ </script>
+ <?php endif; ?>
 
 <form method="POST" action="" class="space-y-6">
 <div>
@@ -281,54 +298,41 @@ Don't have an account?
 </div>
 </div>
 </footer>
-<script>
-// Error Modal functions
-function showErrorModal(message) {
-    const modal = document.getElementById('errorModal');
-    const messageElement = document.getElementById('errorMessage');
-    messageElement.textContent = message;
-    modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-}
+ <script>
+ function closeLoginErrorModal() {
+     var modal = document.getElementById('loginErrorModal');
+     if (!modal) return;
+     modal.classList.add('hidden');
+     document.body.style.overflow = 'auto';
+ }
 
-function closeErrorModal() {
-    const modal = document.getElementById('errorModal');
-    modal.classList.add('hidden');
-    document.body.style.overflow = 'auto';
-}
+ var loginErrorModal = document.getElementById('loginErrorModal');
+ if (loginErrorModal) {
+     loginErrorModal.addEventListener('click', function(e) {
+         if (e.target === this) {
+             closeLoginErrorModal();
+         }
+     });
+ }
 
-document.addEventListener('DOMContentLoaded', function() {
-// Password visibility toggle
-const passwordToggle = document.querySelector('.ri-eye-off-line');
-const passwordInput = document.getElementById('password');
-if (passwordToggle && passwordInput) {
-passwordToggle.addEventListener('click', function() {
-if (passwordInput.type === 'password') {
-passwordInput.type = 'text';
-this.classList.remove('ri-eye-off-line');
-this.classList.add('ri-eye-line');
-} else {
-passwordInput.type = 'password';
-this.classList.remove('ri-eye-line');
-this.classList.add('ri-eye-off-line');
-}
-});
-}
-
-// Close modal on escape key
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        closeErrorModal();
-    }
-});
-
-// Close modal on background click
-document.getElementById('errorModal').addEventListener('click', function(event) {
-    if (event.target === this) {
-        closeErrorModal();
-    }
-});
-});
-</script>
+ document.addEventListener('DOMContentLoaded', function() {
+     // Password visibility toggle
+     const passwordToggle = document.querySelector('.ri-eye-off-line');
+     const passwordInput = document.getElementById('password');
+     if (passwordToggle && passwordInput) {
+         passwordToggle.addEventListener('click', function() {
+             if (passwordInput.type === 'password') {
+                 passwordInput.type = 'text';
+                 this.classList.remove('ri-eye-off-line');
+                 this.classList.add('ri-eye-line');
+             } else {
+                 passwordInput.type = 'password';
+                 this.classList.remove('ri-eye-line');
+                 this.classList.add('ri-eye-off-line');
+             }
+         });
+     }
+ });
+ </script>
 </body>
 </html>
