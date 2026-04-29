@@ -91,9 +91,9 @@ if (!$res) {
                                    
                                     <button type="submit" name="btn_forgot" class="btn btn-primary btn-flat m-b-30 m-t-30">Submit</button>
                                 </form>
-                                <div class="d-flex justify-content-between m-t-15 gap-2">
-                                    <a href="login.php" class="btn btn-secondary btn-sm btn-flat" style="background-color: #6c757d; border-color: #6c757d; color: #fff;">Back</a>
-                                    <a href="login.php" class="btn btn-warning btn-sm btn-flat" style="background-color: #f39c12; border-color: #f39c12; color: #fff;">Back to Login</a>
+                                <div class="d-flex justify-content-center gap-2 m-t-15">
+                                    <a href="login.php" class="btn btn-secondary btn-flat btn-sm" style="background-color: #6c757d; border-color: #6c757d; color: #fff; padding: 6px 12px; font-size: 13px;">Back</a>
+                                    <a href="login.php" class="btn btn-warning btn-flat btn-sm" style="background-color: #f39c12; border-color: #f39c12; color: #fff; padding: 6px 12px; font-size: 13px;">Back to Login</a>
                                 </div>
                             </div>
                         </div>
