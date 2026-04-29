@@ -152,7 +152,7 @@ if(isset($_POST['btn_login']))
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="loginErrorModalLabel">Error</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="forceCloseLoginErrorModal(); return false;">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -160,7 +160,7 @@ if(isset($_POST['btn_login']))
                     <?php echo htmlspecialchars($login_error); ?>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="forceCloseLoginErrorModal(); return false;">Close</button>
                 </div>
             </div>
         </div>
@@ -202,6 +202,32 @@ if(isset($_POST['btn_login']))
     <!-- Password Toggle Script -->
     <script src="../js/password-toggle.js"></script>
 
+    <script>
+        function forceCloseLoginErrorModal() {
+            var modal = document.getElementById('loginErrorModal');
+            if (modal) {
+                modal.classList.remove('show');
+                modal.style.display = 'none';
+                modal.setAttribute('aria-hidden', 'true');
+            }
+
+            document.body.classList.remove('modal-open');
+            document.body.style.overflow = '';
+            document.body.style.paddingRight = '';
+
+            var backdrops = document.querySelectorAll('.modal-backdrop');
+            backdrops.forEach(function(bd) {
+                if (bd && bd.parentNode) bd.parentNode.removeChild(bd);
+            });
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                forceCloseLoginErrorModal();
+            }
+        });
+    </script>
+
     <?php if (!empty($login_error)): ?>
     <script>
         if (window.jQuery) {
@@ -218,7 +244,15 @@ if(isset($_POST['btn_login']))
                 $m.css('z-index', '100000');
 
                 $m.on('click', '[data-dismiss="modal"], .close', function() {
-                    $m.modal('hide');
+                    try {
+                        $m.modal('hide');
+                    } catch (e) {
+                        forceCloseLoginErrorModal();
+                    }
+                });
+
+                $m.on('hidden.bs.modal', function() {
+                    forceCloseLoginErrorModal();
                 });
             });
         }
