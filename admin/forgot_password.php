@@ -10,8 +10,7 @@ require_once('session_handler.php');
   $popup_message = '';
 if(isset($_POST['btn_forgot']))
 {
-$otp = substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyz", 8)), 0, 8);
- $text_email=$_POST['email'];
+$text_email = trim($_POST['email']);
 
 $realemail = '';
 $personname = '';
@@ -32,83 +31,10 @@ if (!$res) {
   $personname = trim($person_fname.' '.$person_lname);
   $user_name = $res['username'];
 
-  
- $msg = "Your Password is :'".$otp."'";
-  $subject='Remind password';
-  //$m = mail($to,$subject,$msg,$headers);
-  
-$otp1 = hash('sha256', $otp);
-function createSalt()
-{
-    return '2123293dsj2hu2nikhiljdsd';
-}
-$salt = createSalt();
-$otp_pass =  hash('sha256', $salt . $otp1);     
-  
-if($text_email == $realemail){
-$s = "select * from tbl_email_config";
-$r = $conn->query($s);
-$rr = mysqli_fetch_array($r);
-
-if (!$rr) {
-  $popup_type = 'error';
-  $popup_message = 'Email configuration is missing. Please contact the administrator.';
-} else {
-
-$mail_host = $rr['mail_driver_host'];
-$mail_name = $rr['name'];
-$mail_username = $rr['mail_username'];
-$mail_password = $rr['mail_password'];
-$mail_port = $rr['mail_port'];
-//$m = mail($to,$subject,$msg,$headers);
- require_once('PHPMailer/PHPMailerAutoload.php');
-$mail = new PHPMailer;
-$mail->isSMTP();   
-// 0 = off (for production use)
-// 1 = client messages
-// 2 = client and server messages
-//$mail->SMTPDebug = 2;// Set mailer to use SMTP
-//Ask for HTML-friendly debug output
-//$mail->Debugoutput = 'html';
-$mail->Host = $mail_host;  // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = $mail_username;                 // SMTP username
-$mail->Password = $mail_password;                           // SMTP password
-//$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail  // Enable TLS encryption, `ssl` also accepted
-$mail->SMTPSecure = 'tls';
-$mail->Port = $mail_port;           // or 587                         // TCP port to connect to
-$mail->setFrom($mail_username, $mail_name);
-//$mail->addAddress($email, $fname);     // Add a recipient
-$mail->addAddress($text_email, $personname);
-
-//$mail->addAddress('ellen@example.com');               // Name is optional
-//$mail->addReplyTo('info@example.com', 'Information');
-//$mail->addCC('cc@example.com');
-//$mail->addBCC('bcc@example.com');
-//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-//$mail->isHTML(true);                                  // Set email format to HTML
-$mail->Subject = 'Forget Password';
-$mail->Body    = "Hello, Your New Password is :'".$otp."' ";
-//$mail->send();
-if ($mail->send()) {
-    $update_stmt = $conn->prepare("UPDATE admin SET password = ? WHERE email = ?");
-    $update_stmt->bind_param("ss", $otp_pass, $text_email);
-    $update_stmt->execute();
-
-    $popup_type = 'success';
-    $popup_message = 'Email sent successfully. Please check your email.';
-} else {
-    $popup_type = 'error';
-    $popup_message = 'Email could not be sent. '.$mail->ErrorInfo;
-}
-
-}
-
-  
-
-    
-    }
+  $_SESSION['reset_password_email'] = $realemail;
+  $_SESSION['reset_password_name'] = $personname;
+  $popup_type = 'success';
+  $popup_message = 'Email verified. Please set your new password.';
 }
 }
   
@@ -126,7 +52,7 @@ if ($mail->send()) {
     <p><?php echo htmlspecialchars($popup_message); ?></p>
     <p>
       <?php if($popup_type === 'success') { ?>
-        <a href="login.php"><button class="button button--success" data-for="js_success-popup">OK</button></a>
+        <a href="reset_password.php"><button class="button button--success" data-for="js_success-popup">Continue</button></a>
       <?php } else { ?>
         <button class="button button--error" data-for="js_error-popup">Close</button>
       <?php } ?>
