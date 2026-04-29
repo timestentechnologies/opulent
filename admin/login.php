@@ -165,6 +165,15 @@ if(isset($_POST['btn_login']))
             </div>
         </div>
     </div>
+
+    <style>
+        #loginErrorModal {
+            z-index: 100000;
+        }
+        .modal-backdrop {
+            z-index: 99999;
+        }
+    </style>
 	
     <!-- End Wrapper -->
     <!-- All Jquery -->
@@ -189,11 +198,21 @@ if(isset($_POST['btn_login']))
     <script>
         if (window.jQuery) {
             jQuery(function() {
-                jQuery('#loginErrorModal').modal('show');
+                if (jQuery('.preloader').length) {
+                    jQuery('.preloader').hide();
+                }
+
+                var $m = jQuery('#loginErrorModal');
+                $m.modal({ show: true, backdrop: true, keyboard: true });
+
+                $m.on('click', '[data-dismiss="modal"], .close', function() {
+                    $m.modal('hide');
+                });
             });
         }
     </script>
     <?php endif; ?>
+
 
 </body>
 
