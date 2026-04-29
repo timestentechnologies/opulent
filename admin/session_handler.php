@@ -53,7 +53,7 @@ function enforceAuthentication() {
 
 // Check if this is the login page
 $current_page = basename($_SERVER['PHP_SELF']);
-if($current_page !== 'login.php' && $current_page !== 'forgot_password.php') {
+if($current_page !== 'login.php' && $current_page !== 'forgot_password.php' && $current_page !== 'reset_password.php') {
     enforceAuthentication();
 }
 ?> 
