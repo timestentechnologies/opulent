@@ -123,6 +123,30 @@ transform: rotate(45deg);
 <body class="bg-gray-50 min-h-screen">
 <?php include 'includes/navigation.php'; ?>
 
+<!-- Error Modal -->
+<div id="errorModal" class="fixed inset-0 bg-black bg-opacity-50 z-[100] hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full relative">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold text-red-600">Error</h3>
+                    <button onclick="closeErrorModal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="ri-close-line text-2xl"></i>
+                    </button>
+                </div>
+                <div class="text-gray-700 mb-6">
+                    <p id="errorMessage">Invalid Email or Password</p>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="closeErrorModal()" class="px-6 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Main Content -->
 <main class="flex-grow flex items-center justify-center py-12 px-4">
 <div class="w-full max-w-md">
@@ -133,9 +157,11 @@ transform: rotate(45deg);
 </div>
 
 <?php if ($error): ?>
-    <div class="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded mb-4">
-        <?php echo $error; ?>
-    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            showErrorModal('<?php echo addslashes($error); ?>');
+        });
+    </script>
 <?php endif; ?>
 
 <form method="POST" action="" class="space-y-6">
@@ -256,6 +282,21 @@ Don't have an account?
 </div>
 </footer>
 <script>
+// Error Modal functions
+function showErrorModal(message) {
+    const modal = document.getElementById('errorModal');
+    const messageElement = document.getElementById('errorMessage');
+    messageElement.textContent = message;
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeErrorModal() {
+    const modal = document.getElementById('errorModal');
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 // Password visibility toggle
 const passwordToggle = document.querySelector('.ri-eye-off-line');
@@ -273,6 +314,20 @@ this.classList.add('ri-eye-off-line');
 }
 });
 }
+
+// Close modal on escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeErrorModal();
+    }
+});
+
+// Close modal on background click
+document.getElementById('errorModal').addEventListener('click', function(event) {
+    if (event.target === this) {
+        closeErrorModal();
+    }
+});
 });
 </script>
 </body>
