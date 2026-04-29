@@ -292,6 +292,9 @@ $row_currency = mysqli_fetch_array($result_currency);
                     font-weight: 700;
                     margin: 0 0 5px 0;
                     color: #2d3748;
+                    background: transparent;
+                    padding: 0;
+                    border: none;
                 }
                 .card-info p {
                     font-size: 13px;
