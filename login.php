@@ -123,8 +123,8 @@ transform: rotate(45deg);
  <body class="bg-gray-50 min-h-screen">
  <?php include 'includes/navigation.php'; ?>
 
- <div id="loginErrorModal" class="fixed inset-0 bg-black bg-opacity-50 z-[101] hidden" aria-labelledby="login-error-title" role="dialog" aria-modal="true">
-     <div class="flex items-center justify-center min-h-screen p-4">
+ <div id="loginErrorModal" class="fixed inset-0 bg-black bg-opacity-50 z-[101] hidden" style="display:none; position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,.5); z-index:101;" aria-labelledby="login-error-title" role="dialog" aria-modal="true">
+     <div class="flex items-center justify-center min-h-screen p-4" style="min-height:100vh; display:flex; align-items:center; justify-content:center; padding:16px;">
          <div class="bg-white rounded-lg shadow-xl max-w-md w-full relative">
              <div class="p-6">
                  <div class="flex justify-between items-center mb-4">
@@ -167,6 +167,7 @@ transform: rotate(45deg);
          if (!modal || !msg) return;
          msg.textContent = message || 'Login failed. Please try again.';
          modal.classList.remove('hidden');
+         modal.style.display = 'block';
          document.body.style.overflow = 'hidden';
      }
  
@@ -303,6 +304,7 @@ Don't have an account?
      var modal = document.getElementById('loginErrorModal');
      if (!modal) return;
      modal.classList.add('hidden');
+     modal.style.display = 'none';
      document.body.style.overflow = 'auto';
  }
 
