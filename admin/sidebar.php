@@ -58,16 +58,7 @@ $useroles=$_SESSION['name'];
                 <?php }?>
 
 
-                <?php if($_SESSION["username"]=='admin') 
-         { ?>
-                     <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">Payment Settings</span></a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="payment_config.php">Payments</a></li>
-                        </ul>
-                    </li>
-                <?php }?>
-
-    <?php if(in_array($_SESSION["username"], ['user', 'admin'])) { ?>
+                <?php if(in_array($_SESSION["username"], ['user', 'admin'])) { ?>
                      <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-credit-card"></i><span class="hide-menu">Financial Management</span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="payments.php">Payments</a></li>
@@ -143,7 +134,6 @@ $useroles=$_SESSION['name'];
                     </li>
 
 <?php }?>
-         
 
 
                 <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-cog"></i><span class="hide-menu">Setting</span></a>
@@ -153,6 +143,9 @@ $useroles=$_SESSION['name'];
                          <?php //} ?>
                           <li><a href="email_config.php">Email Management</a></li>
                           <li><a href="email_test.php">Email Test</a></li>
+                          <?php if($_SESSION["username"]=='admin') { ?>
+                          <li><a href="payment_config.php">Payment Settings</a></li>
+                          <?php } ?>
                            
                         </ul>
                     </li> 

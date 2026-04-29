@@ -184,7 +184,7 @@ $row_currency = mysqli_fetch_array($result_currency);
                                     <table id="myTable" class="table modern-table">
                                         <thead>
                                             <tr>
-                                                <th>ID</th>
+                                                <th>Order #</th>
                                                 <th>Customer</th>
                                                 <th>Service</th>
                                                 <th>Description</th>
@@ -220,7 +220,7 @@ $row_currency = mysqli_fetch_array($result_currency);
                                                 $payment_class = $row['payment_status'] == 'paid' ? 'badge-paid' : 'badge-unpaid';
                                             ?>
                                             <tr>
-                                                <td class="order-id">#<?php echo $row['id']; ?></td>
+                                                <td class="order-id"><?php echo htmlspecialchars($row['tracking_number'] ?: 'N/A'); ?></td>
                                                 <td class="customer-name"><?php echo htmlspecialchars($row['customer_name'] . ' ' . $row['customer_lname']); ?></td>
                                                 <td><?php echo htmlspecialchars($row['service_name']); ?></td>
                                                 <td class="description-cell" title="<?php echo htmlspecialchars($row['description']); ?>"><?php echo htmlspecialchars(strlen($row['description']) > 30 ? substr($row['description'], 0, 30) . '...' : $row['description']); ?></td>
