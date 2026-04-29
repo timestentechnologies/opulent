@@ -142,7 +142,7 @@ $categories = [
         <!-- Summary Cards -->
         <div class="row">
             <div class="col-md-3">
-                <div class="dashboard-card card-pending">
+                <div class="dashboard-card card-navy">
                     <div class="card-icon"><i class="ti-wallet"></i></div>
                     <div class="card-info">
                         <h3>Ksh<?php echo number_format($grand_total, 0); ?></h3>
@@ -157,7 +157,7 @@ $categories = [
                 if($top_categories < 3) {
             ?>
             <div class="col-md-3">
-                <div class="dashboard-card card-<?php echo ['new','progress','completed'][$top_categories]; ?>">
+                <div class="dashboard-card <?php echo $top_categories % 2 == 0 ? 'card-navy' : 'card-orange'; ?>">
                     <div class="card-icon"><i class="ti-receipt"></i></div>
                     <div class="card-info">
                         <h3>Ksh<?php echo number_format($cat['total_amount'], 0); ?></h3>
@@ -446,6 +446,153 @@ $categories = [
         </div>
     </div>
 </div>
+
+<style>
+/* Dashboard Cards */
+.dashboard-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+    min-height: 100px;
+}
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.dashboard-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+}
+
+/* Brand Colors - Navy Blue and Warm Orange */
+.card-navy::before { background: #1a365d; }
+.card-orange::before { background: #ed8936; }
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-right: 20px;
+}
+.card-navy .card-icon { background: #1a365d; color: #fff; }
+.card-orange .card-icon { background: #ed8936; color: #fff; }
+
+.card-info h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: #2d3748;
+}
+.card-info p {
+    font-size: 13px;
+    color: #718096;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+/* Table Cards */
+.table-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.table-header {
+    padding: 20px 25px;
+    border-bottom: 1px solid #edf2f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.table-header h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #2d3748;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.table-header i {
+    color: #1a365d;
+}
+.table-body {
+    padding: 0;
+}
+
+/* Modern Table */
+.modern-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.modern-table thead th {
+    background: #f7fafc;
+    color: #4a5568;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 15px;
+    border: none;
+    border-bottom: 2px solid #e2e8f0;
+}
+.modern-table tbody tr {
+    transition: background 0.2s;
+}
+.modern-table tbody tr:hover {
+    background: #f7fafc;
+}
+.modern-table tbody td {
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #edf2f7;
+    vertical-align: middle;
+}
+.order-id {
+    font-weight: 600;
+    color: #1a365d;
+}
+.price-cell {
+    font-weight: 600;
+    color: #c53030;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+.badge-default { background: #edf2f7; color: #718096; }
+.badge-transit { background: #e6fffa; color: #319795; }
+.badge-received { background: #fffff0; color: #d69e2e; }
+.badge-cleaning { background: #f3e8ff; color: #805ad5; }
+.badge-processing { background: #ebf8ff; color: #3182ce; }
+.badge-delivered { background: #f0fff4; color: #38a169; }
+.badge-unpaid { background: #fed7d7; color: #c53030; }
+</style>
 
 <script>
 function toggleEmployeeField(category) {

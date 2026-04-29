@@ -78,8 +78,8 @@ $row_currency = mysqli_fetch_array($result_currency);
                     ?>
                     
                     <!-- New Orders Card -->
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <div class="dashboard-card card-new">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="dashboard-card card-navy">
                             <div class="card-icon"><i class="ti-bag"></i></div>
                             <div class="card-info">
                                 <h3><?php echo $today_orders; ?></h3>
@@ -89,8 +89,8 @@ $row_currency = mysqli_fetch_array($result_currency);
                     </div>
                     
                     <!-- In Progress Card -->
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <div class="dashboard-card card-progress">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="dashboard-card card-orange">
                             <div class="card-icon"><i class="ti-reload"></i></div>
                             <div class="card-info">
                                 <h3><?php echo $in_progress; ?></h3>
@@ -100,8 +100,8 @@ $row_currency = mysqli_fetch_array($result_currency);
                     </div>
                     
                     <!-- Completed Card -->
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <div class="dashboard-card card-completed">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="dashboard-card card-navy">
                             <div class="card-icon"><i class="ti-check-box"></i></div>
                             <div class="card-info">
                                 <h3><?php echo $completed; ?></h3>
@@ -111,8 +111,8 @@ $row_currency = mysqli_fetch_array($result_currency);
                     </div>
                     
                     <!-- Total Revenue Card -->
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <div class="dashboard-card card-revenue">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="dashboard-card card-orange">
                             <div class="card-icon"><i class="ti-money"></i></div>
                             <div class="card-info">
                                 <h3>Ksh<?php echo number_format($total_revenue, 0); ?></h3>
@@ -122,8 +122,8 @@ $row_currency = mysqli_fetch_array($result_currency);
                     </div>
                     
                     <!-- Total Customers Card -->
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <div class="dashboard-card card-customers">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="dashboard-card card-navy">
                             <div class="card-icon"><i class="ti-user"></i></div>
                             <div class="card-info">
                                 <h3><?php echo $total_customers; ?></h3>
@@ -133,8 +133,8 @@ $row_currency = mysqli_fetch_array($result_currency);
                     </div>
                     
                     <!-- Pending Payment Card -->
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <div class="dashboard-card card-pending">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="dashboard-card card-orange">
                             <div class="card-icon"><i class="ti-wallet"></i></div>
                             <div class="card-info">
                                 <h3>Ksh<?php echo number_format($pending_payment, 0); ?></h3>
@@ -247,7 +247,7 @@ $row_currency = mysqli_fetch_array($result_currency);
                 .dashboard-card {
                     background: #fff;
                     border-radius: 12px;
-                    padding: 20px;
+                    padding: 25px 20px;
                     margin-bottom: 20px;
                     display: flex;
                     align-items: center;
@@ -255,6 +255,7 @@ $row_currency = mysqli_fetch_array($result_currency);
                     transition: transform 0.2s, box-shadow 0.2s;
                     position: relative;
                     overflow: hidden;
+                    min-height: 100px;
                 }
                 .dashboard-card:hover {
                     transform: translateY(-3px);
@@ -268,42 +269,37 @@ $row_currency = mysqli_fetch_array($result_currency);
                     bottom: 0;
                     width: 5px;
                 }
-                .card-new::before { background: linear-gradient(180deg, #667eea 0%, #764ba2 100%); }
-                .card-progress::before { background: linear-gradient(180deg, #f093fb 0%, #f5576c 100%); }
-                .card-completed::before { background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%); }
-                .card-revenue::before { background: linear-gradient(180deg, #43e97b 0%, #38f9d7 100%); }
-                .card-customers::before { background: linear-gradient(180deg, #fa709a 0%, #fee140 100%); }
-                .card-pending::before { background: linear-gradient(180deg, #ffecd2 0%, #fcb69f 100%); }
+                
+                /* Brand Colors - Navy Blue and Warm Orange */
+                .card-navy::before { background: #1a365d; }
+                .card-orange::before { background: #ed8936; }
                 
                 .card-icon {
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 10px;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 12px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-size: 24px;
-                    margin-right: 15px;
+                    font-size: 28px;
+                    margin-right: 20px;
                 }
-                .card-new .card-icon { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; }
-                .card-progress .card-icon { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: #fff; }
-                .card-completed .card-icon { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: #fff; }
-                .card-revenue .card-icon { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: #fff; }
-                .card-customers .card-icon { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: #fff; }
-                .card-pending .card-icon { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #8b4513; }
+                .card-navy .card-icon { background: #1a365d; color: #fff; }
+                .card-orange .card-icon { background: #ed8936; color: #fff; }
                 
                 .card-info h3 {
-                    font-size: 22px;
+                    font-size: 28px;
                     font-weight: 700;
-                    margin: 0;
+                    margin: 0 0 5px 0;
                     color: #2d3748;
                 }
                 .card-info p {
-                    font-size: 12px;
+                    font-size: 13px;
                     color: #718096;
                     margin: 0;
                     text-transform: uppercase;
                     letter-spacing: 0.5px;
+                    font-weight: 600;
                 }
                 
                 /* Chart Cards */
@@ -359,16 +355,16 @@ $row_currency = mysqli_fetch_array($result_currency);
                     color: #667eea;
                 }
                 .btn-view-all {
-                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    background: #1a365d;
                     color: #fff;
                     padding: 8px 20px;
                     border-radius: 20px;
                     font-size: 13px;
                     text-decoration: none;
-                    transition: opacity 0.2s;
+                    transition: background 0.2s;
                 }
                 .btn-view-all:hover {
-                    opacity: 0.9;
+                    background: #2c5282;
                     color: #fff;
                     text-decoration: none;
                 }
