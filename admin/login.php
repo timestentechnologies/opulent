@@ -18,6 +18,8 @@ error_log("Session ID at start: " . session_id());
 include('head.php');
 include('connect.php');
 
+$login_error = '';
+
 if(isset($_POST['btn_login']))
 {
     $unm = $_POST['email'];
@@ -75,25 +77,11 @@ if(isset($_POST['btn_login']))
             }
         } else {
             error_log("Password mismatch. Expected: " . $row['password'] . ", Got: " . $pass);
-            echo '<div class="popup popup--icon -error js_error-popup popup--visible">
-                  <div class="popup__background"></div>
-                  <div class="popup__content">
-                    <h3 class="popup__content__title">Error</h3>
-                    <p>Invalid Email or Password</p>
-                    <p><a href="login.php"><button class="button button--error" data-for="js_error-popup">Close</button></a></p>
-                  </div>
-                </div>';
+            $login_error = 'Invalid Email or Password';
         }
     } else {
         error_log("No user found with email: " . $unm);
-        echo '<div class="popup popup--icon -error js_error-popup popup--visible">
-              <div class="popup__background"></div>
-              <div class="popup__content">
-                <h3 class="popup__content__title">Error</h3>
-                <p>Invalid Email or Password</p>
-                <p><a href="login.php"><button class="button button--error" data-for="js_error-popup">Close</button></a></p>
-              </div>
-            </div>';
+        $login_error = 'Invalid Email or Password';
     }
 }
 ?>
@@ -143,6 +131,25 @@ if(isset($_POST['btn_login']))
         </div>
 
     </div>
+
+    <div class="modal fade" id="loginErrorModal" tabindex="-1" role="dialog" aria-labelledby="loginErrorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginErrorModalLabel">Error</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <?php echo htmlspecialchars($login_error); ?>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 	
     <!-- End Wrapper -->
     <!-- All Jquery -->
@@ -162,6 +169,16 @@ if(isset($_POST['btn_login']))
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Password Toggle Script -->
     <script src="../js/password-toggle.js"></script>
+
+    <?php if (!empty($login_error)): ?>
+    <script>
+        if (window.jQuery) {
+            jQuery(function() {
+                jQuery('#loginErrorModal').modal('show');
+            });
+        }
+    </script>
+    <?php endif; ?>
 
 </body>
 
