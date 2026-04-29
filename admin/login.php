@@ -167,11 +167,19 @@ if(isset($_POST['btn_login']))
     </div>
 
     <style>
+        .preloader {
+            display: none !important;
+            pointer-events: none !important;
+        }
         #loginErrorModal {
-            z-index: 100000;
+            z-index: 100000 !important;
+            pointer-events: auto !important;
+        }
+        #loginErrorModal * {
+            pointer-events: auto !important;
         }
         .modal-backdrop {
-            z-index: 99999;
+            z-index: 99998 !important;
         }
     </style>
 	
@@ -200,10 +208,14 @@ if(isset($_POST['btn_login']))
             jQuery(function() {
                 if (jQuery('.preloader').length) {
                     jQuery('.preloader').hide();
+                    jQuery('.preloader').remove();
                 }
 
                 var $m = jQuery('#loginErrorModal');
                 $m.modal({ show: true, backdrop: true, keyboard: true });
+
+                jQuery('.modal-backdrop').css('z-index', '99998');
+                $m.css('z-index', '100000');
 
                 $m.on('click', '[data-dismiss="modal"], .close', function() {
                     $m.modal('hide');
