@@ -499,14 +499,15 @@ function toggleReferenceFields(method) {
 .card-navy .card-icon { background: #1a365d; color: #fff; }
 .card-orange .card-icon { background: #ed8936; color: #fff; }
 
+.card-info {
+    background: transparent;
+}
 .card-info h3 {
     font-size: 28px;
     font-weight: 700;
     margin: 0 0 5px 0;
     color: #2d3748;
     background: transparent;
-    padding: 0;
-    border: none;
 }
 .card-info p {
     font-size: 13px;
@@ -515,6 +516,7 @@ function toggleReferenceFields(method) {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 600;
+    background: transparent;
 }
 
 /* Table Cards */
