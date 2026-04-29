@@ -4,13 +4,13 @@ include('head.php');
 include('header.php');
 include('sidebar.php');
 
-<?php
 include('connect.php');
 
 // Get current user data
 $sql = "SELECT * FROM admin WHERE id=?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $_SESSION["id"]);
+
 $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_assoc();
