@@ -152,6 +152,7 @@ $useroles=$_SESSION['name'];
                           <?php if($_SESSION["username"]=='admin') { ?>
                           <li><a href="payment_config.php">Payment Settings</a></li>
                           <li><a href="financial_backfill.php">Financial Backfill</a></li>
+                          <li><a href="debug_backfill.php">Backfill Debug</a></li>
                           <?php } ?>
                            
                         </ul>
