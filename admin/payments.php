@@ -75,16 +75,25 @@ include('sidebar.php');
 
 // Get filter parameters
 $filter_type = isset($_GET['filter_type']) ? $_GET['filter_type'] : '';
-$filter_start_date = isset($_GET['start_date']) ? $_GET['start_date'] : date('Y-m-01');
-$filter_end_date = isset($_GET['end_date']) ? $_GET['end_date'] : date('Y-m-d');
+$filter_start_date = isset($_GET['start_date']) ? $_GET['start_date'] : '';
+$filter_end_date = isset($_GET['end_date']) ? $_GET['end_date'] : '';
 $filter_customer = isset($_GET['customer_id']) ? intval($_GET['customer_id']) : 0;
+
+// Default to show all if no dates specified
+if (empty($filter_start_date) && empty($filter_end_date)) {
+    $date_filter_sql = "1=1";
+} else {
+    $start = $filter_start_date ? $filter_start_date : '2000-01-01';
+    $end = $filter_end_date ? $filter_end_date : date('Y-m-d');
+    $date_filter_sql = "p.payment_date BETWEEN '$start' AND '$end'";
+}
 
 // Build query
 $query = "SELECT p.*, c.fname, c.lname, a.fname as admin_fname, a.lname as admin_lname 
           FROM payments p 
           LEFT JOIN customer c ON p.customer_id = c.id 
           LEFT JOIN admin a ON p.recorded_by = a.id 
-          WHERE p.payment_date BETWEEN '$filter_start_date' AND '$filter_end_date'";
+          WHERE $date_filter_sql";
 
 if($filter_type) {
     $query .= " AND p.payment_type = '$filter_type'";
@@ -96,14 +105,15 @@ $query .= " ORDER BY p.payment_date DESC, p.id DESC";
 
 $result = $conn->query($query);
 
-// Get summary statistics
+// Get summary statistics - use same date filter
+$summary_date_filter = str_replace('p.payment_date', 'payment_date', $date_filter_sql);
 $summary_query = "SELECT 
     SUM(CASE WHEN payment_type = 'customer_payment' THEN amount ELSE 0 END) as customer_payments,
     SUM(CASE WHEN payment_type = 'supplier_payment' THEN amount ELSE 0 END) as supplier_payments,
     SUM(CASE WHEN payment_type = 'refund' THEN amount ELSE 0 END) as refunds,
     COUNT(*) as total_transactions
     FROM payments 
-    WHERE payment_date BETWEEN '$filter_start_date' AND '$filter_end_date'";
+    WHERE $summary_date_filter";
 $summary_result = $conn->query($summary_query);
 $summary = $summary_result->fetch_assoc();
 
