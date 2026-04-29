@@ -137,14 +137,40 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (data.success) {
                     window.location.reload();
                 } else {
-                    alert(data.message || 'Login failed. Please try again.');
+                    if (typeof showSuccessModal === 'function' && document.getElementById('successModal')) {
+                        showSuccessModal({ error: true, message: data.message || 'Login failed. Please try again.' });
+                    } else {
+                        const existing = document.getElementById('loginModalError');
+                        if (existing) existing.remove();
+                        const container = document.querySelector('#loginModal form');
+                        if (container) {
+                            const div = document.createElement('div');
+                            div.id = 'loginModalError';
+                            div.className = 'bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded';
+                            div.textContent = data.message || 'Login failed. Please try again.';
+                            container.prepend(div);
+                        }
+                    }
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('An error occurred. Please try again.');
+                if (typeof showSuccessModal === 'function' && document.getElementById('successModal')) {
+                    showSuccessModal({ error: true, message: 'An error occurred. Please try again.' });
+                } else {
+                    const existing = document.getElementById('loginModalError');
+                    if (existing) existing.remove();
+                    const container = document.querySelector('#loginModal form');
+                    if (container) {
+                        const div = document.createElement('div');
+                        div.id = 'loginModalError';
+                        div.className = 'bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded';
+                        div.textContent = 'An error occurred. Please try again.';
+                        container.prepend(div);
+                    }
+                }
             });
         });
     }
 });
-</script> 
+</script>

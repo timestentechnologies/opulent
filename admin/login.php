@@ -19,6 +19,10 @@ include('head.php');
 include('connect.php');
 
 $login_error = '';
+if (isset($_SESSION['admin_login_error']) && $_SESSION['admin_login_error'] !== '') {
+    $login_error = $_SESSION['admin_login_error'];
+    unset($_SESSION['admin_login_error']);
+}
 
 if(isset($_POST['btn_login']))
 {
@@ -82,6 +86,17 @@ if(isset($_POST['btn_login']))
     } else {
         error_log("No user found with email: " . $unm);
         $login_error = 'Invalid Email or Password';
+    }
+
+    if ($login_error !== '') {
+        $_SESSION['admin_login_error'] = $login_error;
+        ob_clean();
+        if (!headers_sent()) {
+            header('Location: login.php');
+            exit();
+        }
+        echo "<script>window.location.href = 'login.php';</script>";
+        exit();
     }
 }
 ?>
