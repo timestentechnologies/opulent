@@ -33,8 +33,8 @@ if (!$res) {
 
   $_SESSION['reset_password_email'] = $realemail;
   $_SESSION['reset_password_name'] = $personname;
-  $popup_type = 'success';
-  $popup_message = 'Email verified. Please set your new password.';
+  header('Location: reset_password.php');
+  exit;
 }
 }
   
@@ -90,6 +90,9 @@ if (!$res) {
                                     
                                    
                                     <button type="submit" name="btn_forgot" class="btn btn-primary btn-flat m-b-30 m-t-30">Submit</button>
+                                    <div class="text-center m-t-15">
+                                        <a href="login.php" class="text-primary">Back to Login</a>
+                                    </div>
                                 </form>
                             </div>
                         </div>

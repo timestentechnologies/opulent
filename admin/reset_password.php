@@ -168,6 +168,9 @@ include('head.php');
                 </div>
 
                 <button type="submit" name="btn_reset" class="btn btn-primary btn-flat m-b-30 m-t-30">Reset Password</button>
+                <div class="text-center m-t-15">
+                  <a href="login.php" class="text-primary">Back to Login</a>
+                </div>
               </form>
               <div style="margin-top: 10px;">
                 <a href="forgot_password.php">Back</a>
