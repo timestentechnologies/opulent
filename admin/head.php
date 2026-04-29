@@ -24,6 +24,8 @@ require_once('session_handler.php');
     <link href="css/lib/chartist/chartist.min.css" rel="stylesheet">
   <link href="css/lib/owl.carousel.min.css" rel="stylesheet" />
     <link href="css/lib/owl.theme.default.min.css" rel="stylesheet" />
+    <!-- Chart.js -->
+    <script src="js/lib/chart-js/Chart.bundle.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
