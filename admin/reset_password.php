@@ -169,9 +169,9 @@ include('head.php');
 
                 <button type="submit" name="btn_reset" class="btn btn-primary btn-flat m-b-30 m-t-30">Reset Password</button>
               </form>
-              <div class="d-flex justify-content-between m-t-15">
-                <a href="forgot_password.php" class="btn btn-secondary btn-flat" style="background-color: #6c757d; border-color: #6c757d; color: #fff;">Back</a>
-                <a href="login.php" class="btn btn-warning btn-flat" style="background-color: #f39c12; border-color: #f39c12; color: #fff;">Back to Login</a>
+              <div class="d-flex justify-content-between m-t-15 gap-2">
+                <a href="forgot_password.php" class="btn btn-secondary btn-sm btn-flat" style="background-color: #6c757d; border-color: #6c757d; color: #fff;">Back</a>
+                <a href="login.php" class="btn btn-warning btn-sm btn-flat" style="background-color: #f39c12; border-color: #f39c12; color: #fff;">Back to Login</a>
               </div>
             </div>
           </div>

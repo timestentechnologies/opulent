@@ -6970,3 +6970,8 @@ tbody tr td:last-child {
   outline: none;
   box-shadow: none;
 }
+
+/* Utility class for gap between flex items */
+.gap-2 {
+  gap: 0.5rem;
+}
