@@ -153,6 +153,7 @@ $useroles=$_SESSION['name'];
                           <li><a href="payment_config.php">Payment Settings</a></li>
                           <li><a href="financial_backfill.php">Financial Backfill</a></li>
                           <li><a href="debug_backfill.php">Backfill Debug</a></li>
+                          <li><a href="setup_groups.php">Setup User Groups</a></li>
                           <?php } ?>
                            
                         </ul>

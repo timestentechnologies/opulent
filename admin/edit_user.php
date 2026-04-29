@@ -25,7 +25,7 @@ if(isset($_POST["btn_update"]))
       $msg = "Failed to upload image";
     }
    
-      $q1="UPDATE `admin` SET `fname`='$fname',`lname`='$lname',`email`='$email',`address`='$address',`gender`='$gender',`contact`='$contact',`dob`='$dob' ,`image`='$image' WHERE `id`='".$_GET['id']."'";
+      $q1="UPDATE `admin` SET `fname`='$fname',`lname`='$lname',`email`='$email',`address`='$address',`gender`='$gender',`contact`='$contact',`dob`='$dob',`group_id`='$group_id' ,`image`='$image' WHERE `id`='".$_GET['id']."'";
     //$q2=$conn->query($q1);
     if ($conn->query($q1) === TRUE) {
       $_SESSION['success']=' Record Successfully Updated';
@@ -61,6 +61,15 @@ $gender = $row['gender'];
 $contact = $row['contact'];
 $dob = $row['dob'];
 $image = $row['image'];
+$group_id = $row['group_id'];
+}
+
+// Fetch groups for dropdown
+$groups_sql = "SELECT * FROM tbl_group ORDER BY name";
+$groups_result = $conn->query($groups_sql);
+$groups = [];
+while($g = $groups_result->fetch_assoc()) {
+    $groups[] = $g;
 }
 
 ?> 
@@ -164,6 +173,20 @@ $image = $row['image'];
                                                 <label class="col-sm-3 control-label">Address</label>
                                                 <div class="col-sm-9">
                                                     <textarea class="form-control" rows="4" name="address" placeholder="Address" style="height: 120px;"><?php echo $address;?></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <label class="col-sm-3 control-label">User Group</label>
+                                                <div class="col-sm-9">
+                                                    <select name="group_id" class="form-control" required="">
+                                                        <option value="">--Select Group--</option>
+                                                        <?php foreach($groups as $g): ?>
+                                                        <option value="<?php echo $g['id']; ?>" <?php if($group_id == $g['id']){ echo "selected"; }?>><?php echo htmlspecialchars($g['name']); ?></option>
+                                                        <?php endforeach; ?>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>

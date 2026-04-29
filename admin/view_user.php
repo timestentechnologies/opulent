@@ -65,8 +65,23 @@ if(isset($_GET['id']))
                                         <tbody>
                                     <?php 
                                     include 'connect.php';
-                                    $sql = "SELECT * FROM admin where group_id != 1";
-                                     $result = $conn->query($sql);
+                                    
+                                    // Handle filter parameter
+                                    $filter = isset($_GET['filter']) ? $_GET['filter'] : '';
+                                    
+                                    // Build query based on filter
+                                    if ($filter === 'admins') {
+                                        // Show only admins (group_id = 1)
+                                        $sql = "SELECT * FROM admin WHERE group_id = 1";
+                                    } elseif ($filter === 'employees') {
+                                        // Show non-admin users (group_id != 1)
+                                        $sql = "SELECT * FROM admin WHERE group_id != 1";
+                                    } else {
+                                        // Show all users
+                                        $sql = "SELECT * FROM admin";
+                                    }
+                                    
+                                    $result = $conn->query($sql);
 
                                    while($row = $result->fetch_assoc()) { 
                                    $sql1 = "SELECT * FROM  tbl_group where id  ='".$row['group_id']."'";
