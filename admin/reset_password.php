@@ -168,12 +168,10 @@ include('head.php');
                 </div>
 
                 <button type="submit" name="btn_reset" class="btn btn-primary btn-flat m-b-30 m-t-30">Reset Password</button>
-                <div class="text-center m-t-15">
-                  <a href="login.php" class="text-primary">Back to Login</a>
-                </div>
               </form>
-              <div style="margin-top: 10px;">
-                <a href="forgot_password.php">Back</a>
+              <div class="d-flex justify-content-between m-t-15">
+                <a href="forgot_password.php" class="btn btn-secondary btn-flat" style="background-color: #6c757d; border-color: #6c757d; color: #fff;">Back</a>
+                <a href="login.php" class="btn btn-warning btn-flat" style="background-color: #f39c12; border-color: #f39c12; color: #fff;">Back to Login</a>
               </div>
             </div>
           </div>
@@ -183,6 +181,8 @@ include('head.php');
   </div>
 </div>
 
+<!-- Font Awesome for password toggle icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- All Jquery -->
 <script src="js/lib/jquery/jquery.min.js"></script>
 <script src="js/lib/bootstrap/js/popper.min.js"></script>
@@ -191,6 +191,8 @@ include('head.php');
 <script src="js/sidebarmenu.js"></script>
 <script src="js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
 <script src="js/custom.min.js"></script>
+<!-- Password Toggle Script -->
+<script src="../js/password-toggle.js"></script>
 
 </body>
 </html>

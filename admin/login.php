@@ -158,6 +158,10 @@ if(isset($_POST['btn_login']))
     <script src="js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <!--Custom JavaScript -->
     <script src="js/custom.min.js"></script>
+    <!-- Font Awesome for password toggle icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Password Toggle Script -->
+    <script src="../js/password-toggle.js"></script>
 
 </body>
 

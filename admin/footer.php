@@ -75,6 +75,8 @@ require_once('session_handler.php');
     <script src="js/lib/html5-editor/wysihtml5-0.3.0.js"></script>
     <script src="js/lib/html5-editor/bootstrap-wysihtml5.js"></script>
     <script src="js/lib/html5-editor/wysihtml5-init.js"></script>
+    <!-- Password Toggle Script -->
+    <script src="../js/password-toggle.js"></script>
 </body>
 
 </html>

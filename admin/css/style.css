@@ -1587,7 +1587,7 @@ textarea {
 }
 .sidebar-nav ul li a:hover i {
   /*color: #1976d2;*/
-  #f9fdff;
+  color: #f9fdff;
 }
 .sidebar-nav ul li a.active {
   /*color: #1976d2;*/
@@ -2125,9 +2125,9 @@ background: #85CE36 !important;
   stroke-linejoin: round;
   stroke-linecap: round;
   stroke-dasharray: 500%;
-  stroke-dasharray: 0 /;
+  stroke-dasharray: 0;
   /* fixes IE prob */
-  stroke-dashoffset: 0 /;
+  stroke-dashoffset: 0;
   /* fixes IE prob */
   -webkit-animation: am-draw 40s;
   animation: am-draw 40s;
@@ -6934,4 +6934,39 @@ tbody tr td:last-child {
   .retina-logo {
     display: inline-block !important;
   }
+}
+
+/* Password Toggle Styles */
+.password-input-wrapper {
+  position: relative;
+  display: block;
+}
+
+.password-input-wrapper input[type="password"],
+.password-input-wrapper input[type="text"] {
+  padding-right: 40px !important;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 8px;
+  color: #666;
+  font-size: 16px;
+  z-index: 10;
+  outline: none;
+}
+
+.password-toggle-btn:hover {
+  color: #333;
+}
+
+.password-toggle-btn:focus {
+  outline: none;
+  box-shadow: none;
 }

@@ -33,6 +33,8 @@ require_once('session_handler.php');
  <link href="css/lib/calendar2/semantic.ui.min.css" rel="stylesheet">
     <link href="css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
      <link href="css/lib/sweetalert/sweetalert.css" rel="stylesheet">
+    <!-- Font Awesome for password toggle icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="fix-header fix-sidebar">
