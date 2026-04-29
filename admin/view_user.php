@@ -1,12 +1,26 @@
 <?php
 require_once('session_handler.php');
+include('connect.php');
+
+// Check if trying to delete a superadmin
+if(isset($_GET['id'])) {
+    $check_sql = "SELECT group_id FROM admin WHERE id = " . intval($_GET['id']);
+    $check_result = $conn->query($check_sql);
+    $is_superadmin = false;
+    if($check_result && $row = $check_result->fetch_assoc()) {
+        // Check if group_id is 3 (superadmin) or if username is 'admin' with group_id 1
+        if($row['group_id'] == 3) {
+            $is_superadmin = true;
+        }
+    }
+}
 ?>
 
 <?php include('head.php');?>
 <?php include('header.php');?>
 <?php include('sidebar.php');
 
-if(isset($_GET['id']))
+if(isset($_GET['id']) && !$is_superadmin)
 { ?>
 <div class="popup popup--icon -question js_question-popup popup--visible">
   <div class="popup__background"></div>
@@ -18,6 +32,19 @@ if(isset($_GET['id']))
     <p>
       <a href="del_user.php?id=<?php echo $_GET['id']; ?>" class="button button--success" data-for="js_success-popup">Yes</a>
       <a href="view_user.php" class="button button--error" data-for="js_success-popup">No</a>
+    </p>
+  </div>
+</div>
+<?php } elseif(isset($_GET['id']) && $is_superadmin) { ?>
+<div class="popup popup--icon -error js_error-popup popup--visible">
+  <div class="popup__background"></div>
+  <div class="popup__content">
+    <h3 class="popup__content__title">
+      Cannot Delete
+    </h1>
+    <p>Superadmin users cannot be deleted.</p>
+    <p>
+      <a href="view_user.php" class="button button--error" data-for="js_success-popup">OK</a>
     </p>
   </div>
 </div>
@@ -100,9 +127,11 @@ if(isset($_GET['id']))
                                                 <a href="edit_user.php?id=<?=$row['id'];?>"><button type="button" class="btn btn-xs btn-primary" ><i class="fa fa-pencil"></i></button></a>
                                               <?php } } ?>
 
-            <?php if(isset($useroles)){  if(in_array("delete_user",$useroles)){ ?> 
+            <?php if(isset($useroles)){  if(in_array("delete_user",$useroles)){ 
+                                                // Don't show delete button for superadmin (group_id = 3)
+                                                if($row['group_id'] != 3) { ?>
                                                 <a href="view_user.php?id=<?=$row['id'];?>"><button type="button" class="btn btn-xs btn-danger" ><i class="fa fa-trash"></i></button></a>
-                                              <?php } } ?>
+                                              <?php } } } ?>
                                                 <!-- <a href="assign_role.php?id=<?=$row['id'];?>"><button type="button" class="btn btn-xs btn-danger" ><i class="fa fa-pay"></i></button></a> -->
                                                 </td>
                                             </tr>

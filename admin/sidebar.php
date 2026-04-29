@@ -42,8 +42,6 @@ $useroles=$_SESSION['name'];
 <li><a href="add_user.php">Add User</a></li>
 <?php } } ?>
 <li><a href="view_user.php">All Users</a></li>
-<li><a href="view_user.php?filter=employees">Employees</a></li>
-<li><a href="view_user.php?filter=admins">Admins</a></li>
 </ul>
 </li>
 <?php } } ?>
