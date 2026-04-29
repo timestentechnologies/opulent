@@ -6,18 +6,30 @@ require_once('session_handler.php');
 
   <?php
   include('connect.php');
+  $popup_type = '';
+  $popup_message = '';
 if(isset($_POST['btn_forgot']))
 {
 $otp = substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyz", 8)), 0, 8);
  $text_email=$_POST['email'];
 
-$sql = "SELECT * FROM admin where email ='".$text_email."' " ;
-$ans = $conn->query($sql);
-$res=mysqli_fetch_array($ans);
-   $realemail=$res['email'];
-  $person_fname=$res['fname'];  
-  $person_lname=$res['lname'];
-  $personname=$person_fname.$person_lname;
+$realemail = '';
+$personname = '';
+$user_name = '';
+
+$stmt = $conn->prepare("SELECT email, fname, lname, username FROM admin WHERE email = ? LIMIT 1");
+$stmt->bind_param("s", $text_email);
+$stmt->execute();
+$res = $stmt->get_result()->fetch_assoc();
+
+if (!$res) {
+  $popup_type = 'error';
+  $popup_message = 'Email address not found.';
+} else {
+  $realemail = $res['email'];
+  $person_fname = $res['fname'];
+  $person_lname = $res['lname'];
+  $personname = trim($person_fname.' '.$person_lname);
   $user_name = $res['username'];
 
   
@@ -34,14 +46,14 @@ $salt = createSalt();
 $otp_pass =  hash('sha256', $salt . $otp1);     
   
 if($text_email == $realemail){
-$sql = "UPDATE admin SET password ='$otp_pass' WHERE email='$text_email'";
-$ans1 = $conn->query($sql);
- 
-
-
 $s = "select * from tbl_email_config";
 $r = $conn->query($s);
 $rr = mysqli_fetch_array($r);
+
+if (!$rr) {
+  $popup_type = 'error';
+  $popup_message = 'Email configuration is missing. Please contact the administrator.';
+} else {
 
 $mail_host = $rr['mail_driver_host'];
 $mail_name = $rr['name'];
@@ -80,62 +92,62 @@ $mail->Subject = 'Forget Password';
 $mail->Body    = "Hello, Your New Password is :'".$otp."' ";
 //$mail->send();
 if ($mail->send()) {
-    
-?>
-<link rel="stylesheet" href="popup_style.css">
-<div class="popup popup--icon -success js_success-popup popup--visible">
-  <div class="popup__background"></div>
-  <div class="popup__content">
-    <h3 class="popup__content__title">
-      Success 
-    </h1>
-    <p>Send Email Successfully.....Please check Your Email</p>
-    <p>
-      <a href="login.php"><button class="button button--success" data-for="js_success-popup">OK</button></a>
-    </p>
-  </div>
-</div>
-<?php } else { ?>
-<link rel="stylesheet" href="popup_style.css">
-<div class="popup popup--icon -error js_error-popup popup--visible">
-  <div class="popup__background"></div>
-  <div class="popup__content">
-    <h3 class="popup__content__title">
-      Error 
-    </h1>
-    <p>Something Goes Wrong.....</p>
-    <p>
-      <button class="button button--error" data-for="js_error-popup">Close</button>
-    </p>
-  </div>
-</div>
-<?php } ?>
-    <script>
-      var addButtonTrigger = function addButtonTrigger(el) {
-  el.addEventListener('click', function () {
-    var popupEl = document.querySelector('.' + el.dataset.for);
-    popupEl.classList.toggle('popup--visible');
-  });
-};
+    $update_stmt = $conn->prepare("UPDATE admin SET password = ? WHERE email = ?");
+    $update_stmt->bind_param("ss", $otp_pass, $text_email);
+    $update_stmt->execute();
 
-Array.from(document.querySelectorAll('button[data-for]')).
-forEach(addButtonTrigger);
-    </script>
+    $popup_type = 'success';
+    $popup_message = 'Email sent successfully. Please check your email.';
+} else {
+    $popup_type = 'error';
+    $popup_message = 'Email could not be sent. '.$mail->ErrorInfo;
+}
 
-
-<?php
+}
 
   
 
     
     }
-}   
+}
+}
+  
 
 ?> 
+
+<?php if(!empty($popup_type) && !empty($popup_message)) { ?>
+<link rel="stylesheet" href="popup_style.css">
+<div class="popup popup--icon -<?php echo htmlspecialchars($popup_type); ?> js_<?php echo htmlspecialchars($popup_type); ?>-popup popup--visible">
+  <div class="popup__background"></div>
+  <div class="popup__content">
+    <h3 class="popup__content__title">
+      <?php echo ($popup_type === 'success') ? 'Success' : 'Error'; ?>
+    </h1>
+    <p><?php echo htmlspecialchars($popup_message); ?></p>
+    <p>
+      <?php if($popup_type === 'success') { ?>
+        <a href="login.php"><button class="button button--success" data-for="js_success-popup">OK</button></a>
+      <?php } else { ?>
+        <button class="button button--error" data-for="js_error-popup">Close</button>
+      <?php } ?>
+    </p>
+  </div>
+</div>
+<script>
+  var addButtonTrigger = function addButtonTrigger(el) {
+    el.addEventListener('click', function () {
+      var popupEl = document.querySelector('.' + el.dataset.for);
+      popupEl.classList.toggle('popup--visible');
+    });
+  };
+  Array.from(document.querySelectorAll('button[data-for]')).forEach(addButtonTrigger);
+</script>
+<?php } ?>
 
 
     <!-- Main wrapper  -->
     <div id="main-wrapper">
+
 
         <div class="unix-login">
             <div class="container-fluid">
