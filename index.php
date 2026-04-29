@@ -39,8 +39,29 @@ include 'order_modal.php';
 <link rel="shortcut icon" href="favicon.ico?v=2">
 <link rel="apple-touch-icon" href="images/favicon.png?v=2">
 <meta name="theme-color" content="#0B5FB0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- Critical CSS - Load first to prevent FOUC -->
+<style>
+/* Critical base styles to prevent flash */
+body{font-family:'Inter',sans-serif;background:#fff;min-height:100vh}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#fff 0%,#e3fbff 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:9999}
+.loader-text{font-size:5rem;font-family:'Pacifico',cursive;display:flex;gap:0.2em;margin-bottom:1rem}
+.loader-subtitle{font-family:'Inter',sans-serif;color:#38b6ff;font-size:1.2rem}
+</style>
+
+<!-- Tailwind CSS with proper loading -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css"></noscript>
+
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>
+// Configure Tailwind before any content renders
 tailwind.config={
     theme:{
         extend:{
@@ -63,17 +84,30 @@ tailwind.config={
         }
     }
 }
-</script>
-<!-- Define login status for use in order.js -->
-<script>
+
+// Define login status for use in order.js
 var user_logged_in = <?php echo isset($_SESSION['customer_id']) ? 'true' : 'false'; ?>;
+
+// Prevent FOUC by hiding content until styles are loaded
+(function() {
+    var html = document.documentElement;
+    html.style.visibility = 'hidden';
+    
+    function showContent() {
+        html.style.visibility = 'visible';
+    }
+    
+    // Show content when CSS is loaded or after a timeout
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', showContent);
+    } else {
+        showContent();
+    }
+    
+    // Fallback timeout
+    setTimeout(showContent, 1000);
+})();
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.16/dist/tailwind.min.css">
 <script src="js/order.js"></script>
 <style>
 :where([class^="ri-"])::before { content: "\f3c2"; }
