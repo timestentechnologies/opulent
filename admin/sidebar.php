@@ -41,7 +41,9 @@ $useroles=$_SESSION['name'];
 <?php if(isset($useroles)){  if(in_array("add_user",$useroles)){ ?> 
 <li><a href="add_user.php">Add User</a></li>
 <?php } } ?>
-<li><a href="view_user.php">View User</a></li>
+<li><a href="view_user.php">All Users</a></li>
+<li><a href="view_user.php?filter=employees">Employees</a></li>
+<li><a href="view_user.php?filter=admins">Admins</a></li>
 </ul>
 </li>
 <?php } } ?>
@@ -122,10 +124,14 @@ $useroles=$_SESSION['name'];
                         </ul>
                     </li>
 
-        
+                <?php if($_SESSION["username"]=='admin') { ?>
+                     <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">Employee Management</span></a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li><a href="view_user.php?filter=employees">Employees</a></li>
+                            <li><a href="view_user.php?filter=admins">Admins</a></li>
+                        </ul>
+                    </li>
 
-
- <?php if($_SESSION["username"]=='admin') { ?>
                      <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-shield"></i><span class="hide-menu">User Permissions</span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="assign_role.php">Assign Role</a></li>
@@ -145,6 +151,7 @@ $useroles=$_SESSION['name'];
                           <li><a href="email_test.php">Email Test</a></li>
                           <?php if($_SESSION["username"]=='admin') { ?>
                           <li><a href="payment_config.php">Payment Settings</a></li>
+                          <li><a href="financial_backfill.php">Financial Backfill</a></li>
                           <?php } ?>
                            
                         </ul>
